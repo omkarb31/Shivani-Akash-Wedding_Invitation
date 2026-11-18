@@ -327,6 +327,39 @@ body { background: var(--paper); }
 @media (max-width: 1100px) and (min-width: 901px) { .event-card.flip { height: 450px; } }
 @media (max-width: 900px) { .event-card.flip { height: 420px; } .event-card.flip { max-width: 520px; width: 100%; margin: 0 auto; } }
 
+/* ===== animated card scenes ===== */
+.card-front .card-icon { display: none; }
+.card-scene { width: 100%; max-width: 270px; margin: 14px auto 0; }
+.card-scene svg { width: 100%; height: auto; overflow: visible; display: block; }
+.sc-glow { animation: breathe 4s ease-in-out infinite; transform-origin: 120px 70px; }
+.sc-orbit { transform-origin: 120px 70px; animation: spin 18s linear infinite; }
+.sc-shine { animation: twinkle 3s ease-in-out infinite; }
+.sc-fall { animation: scFall 3.2s linear infinite; animation-delay: var(--d, 0s); opacity: 0; }
+@keyframes scFall { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } 100% { transform: translateY(120px) translateX(10px); opacity: 0; } }
+.sc-bob { animation: scBob 2s ease-in-out infinite; animation-delay: var(--d, 0s); }
+@keyframes scBob { 50% { transform: translateY(5px); } }
+.sc-garland { animation: scDash 1.6s linear infinite; }
+@keyframes scDash { to { stroke-dashoffset: -9; } }
+.sc-flame { transform-box: fill-box; transform-origin: 50% 100%; animation: flicker .5s ease-in-out infinite alternate; }
+.sc-flame.in { animation-duration: .35s; }
+@keyframes flicker { from { transform: scale(1, .88) skewX(-4deg); } to { transform: scale(.92, 1.08) skewX(4deg); } }
+.sc-spark { animation: scSpark 2s ease-out infinite; animation-delay: var(--d, 0s); opacity: 0; }
+@keyframes scSpark { 0% { transform: translate(0, 0); opacity: 0; } 20% { opacity: 1; } 100% { transform: translate(8px, -50px); opacity: 0; } }
+.sc-disco { transform-box: fill-box; transform-origin: 50% 50%; }
+.sc-rot { animation: scRot 2.4s linear infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes scRot { 0% { transform: scaleX(1); } 50% { transform: scaleX(.15); } 100% { transform: scaleX(1); } }
+.sc-twinkle { animation: twinkle 2.2s ease-in-out infinite; animation-delay: var(--d, 0s); transform-box: fill-box; transform-origin: center; }
+.sc-glass { transform-box: fill-box; transform-origin: 50% 100%; }
+.sc-glass.l { transform: translate(100px, 58px) rotate(-14deg); animation: clinkL 2.4s ease-in-out infinite; }
+.sc-glass.r { transform: translate(140px, 58px) rotate(14deg); animation: clinkR 2.4s ease-in-out infinite; }
+@keyframes clinkL { 0%, 55%, 100% { transform: translate(100px, 58px) rotate(-16deg); } 70% { transform: translate(104px, 58px) rotate(-2deg); } }
+@keyframes clinkR { 0%, 55%, 100% { transform: translate(140px, 58px) rotate(16deg); } 70% { transform: translate(136px, 58px) rotate(2deg); } }
+.sc-bubble { animation: scBubble 2.4s ease-in infinite; animation-delay: var(--d, 0s); opacity: 0; }
+@keyframes scBubble { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: .9; } 100% { transform: translateY(-60px); opacity: 0; } }
+.sc-note { animation: scNote 3.4s ease-in-out infinite; animation-delay: var(--d, 0s); opacity: 0; }
+@keyframes scNote { 0% { transform: translateY(0) rotate(0); opacity: 0; } 25% { opacity: 1; } 100% { transform: translateY(-50px) rotate(20deg); opacity: 0; } }
+.event-card.flip:hover .card-scene svg { transform: scale(1.06); transition: transform .5s; }
+
 /* ===== mobile / touch ===== */
 html, body { overflow-x: hidden; max-width: 100%; }
 body.locked { height: 100dvh; }
@@ -382,3 +415,18 @@ video { max-width: 100%; }
   .details-section, .moments-section, .location-section { padding-left: 6%; padding-right: 6%; }
   .moment-art { font-size: 48px; }
 }
+
+/* ===== couple card scenes (haldi swing + wedding) ===== */
+.sc-swing { transform-origin: 120px 20px; animation: scSwing 4s ease-in-out infinite alternate; }
+@keyframes scSwing { from { transform: rotate(-2.2deg); } to { transform: rotate(2.2deg); } }
+.sc-bloom { transform-box: fill-box; transform-origin: center; animation: scBloom 2.4s ease-in-out infinite; animation-delay: var(--d, 0s); }
+@keyframes scBloom { 50% { transform: scale(1.35); } }
+.sc-flowerspin { animation: spin 14s linear infinite; }
+.card-scene .sc-blink { transform-box: fill-box; transform-origin: center; animation: blink-eye 4.5s infinite; }
+.sc-orbit2 { transform-box: fill-box; transform-origin: center; animation: spin 40s linear infinite; }
+.sc-sway { transform-box: fill-box; transform-origin: 50% 100%; animation: swayCloth 2.4s ease-in-out infinite alternate; }
+.sc-heart { animation: scNote 3s ease-in infinite; animation-delay: var(--d, 0s); opacity: 0; }
+.haldi-card .card-scene, .ceremony-card .card-scene { max-width: 250px; box-shadow: 0 14px 30px rgba(83,43,41,.25); border-radius: 14px; margin-top: 26px; }
+.event-card.flip { height: 470px; }
+@media (max-width: 1100px) and (min-width: 901px) { .event-card.flip { height: 510px; } }
+@media (max-width: 900px) { .event-card.flip { height: 470px; } }

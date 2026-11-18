@@ -112,6 +112,85 @@ document.querySelectorAll(".event-card").forEach((card) => card.addEventListener
   window.setInterval(run, 1000);
 })();
 
+// Animated scenes for each event card (swap for <img> photos any time)
+const CARD_SCENES = {
+  "haldi-card": `<svg viewBox="0 0 240 200" aria-hidden="true">
+    <rect width="240" height="200" rx="14" fill="#4fb7c6"/>
+    <circle cx="120" cy="100" r="92" fill="#6fcad6" opacity=".55"/>
+    <g class="sc-swing">
+      <path d="M52 176 C48 16 192 16 188 176" fill="none" stroke="#7a5a2a" stroke-width="3"/>
+      ${Array.from({length: 13}, (_, i) => { const t = i / 12, u = 1 - t; const x = 52*u*u*u + 144*u*u*t + 576*u*t*t + 188*t*t*t; const y = 176*u*u*u + 48*u*u*t + 48*u*t*t + 176*t*t*t; return `<g class="sc-bloom" style="--d:${(i * .18).toFixed(2)}s"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5.5" fill="#ffd54a"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2.2" fill="#f08a00"/></g>`; }).join("")}
+      <line x1="72" y1="88" x2="72" y2="150" stroke="#7a5a2a" stroke-width="2"/><line x1="168" y1="88" x2="168" y2="150" stroke="#7a5a2a" stroke-width="2"/>
+      ${[104,118,132].map((y, i) => `<circle class="sc-bloom" style="--d:${i*.3}s" cx="72" cy="${y}" r="4" fill="#ffd54a"/><circle class="sc-bloom" style="--d:${i*.3+.15}s" cx="168" cy="${y}" r="4" fill="#ffd54a"/>`).join("")}
+      <rect x="62" y="150" width="116" height="9" rx="4" fill="#8b5a2b"/>
+      <!-- groom -->
+      <path d="M118 166 L166 166 L168 184 L116 184Z" fill="#f3ece0"/>
+      <path d="M122 106 Q142 98 162 106 L166 152 L118 152Z" fill="#f7d046"/>
+      <path d="M142 100 L142 152" stroke="#e0a800" stroke-width="1.5"/>
+      <circle cx="142" cy="86" r="16" fill="#e0a07a"/>
+      <path d="M126 84 C122 62 162 62 158 84 C154 72 130 72 126 84Z" fill="#2a1a1a"/>
+      <ellipse class="sc-blink" cx="136" cy="87" rx="1.8" ry="2.2" fill="#2a1a1a"/><ellipse class="sc-blink" cx="148" cy="87" rx="1.8" ry="2.2" fill="#2a1a1a"/>
+      <path d="M137 94 Q142 99 147 94" fill="none" stroke="#7a2430" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M135 92 Q142 90 149 92" fill="none" stroke="#2a1a1a" stroke-width="1.6" stroke-linecap="round"/>
+      <!-- bride -->
+      <path d="M70 160 Q100 172 130 160 L136 182 Q100 194 64 182Z" fill="#f2b705"/>
+      <path d="M80 108 Q100 100 120 108 L126 156 L74 156Z" fill="#f5c518"/>
+      <path d="M80 108 L96 156" stroke="#e08a00" stroke-width="5" opacity=".7"/>
+      <circle cx="100" cy="90" r="16" fill="#f1b88e"/>
+      <path d="M84 88 C80 64 120 64 116 88 C112 78 88 78 84 88Z" fill="#2a1a1a"/>
+      <circle cx="100" cy="68" r="7" fill="#2a1a1a"/><circle cx="109" cy="70" r="4.5" fill="#ffd54a"/><circle cx="109" cy="70" r="1.8" fill="#f08a00"/>
+      <circle cx="100" cy="80" r="1.6" fill="#b3122a"/>
+      <ellipse class="sc-blink" cx="94" cy="91" rx="1.8" ry="2.2" fill="#2a1a1a"/><ellipse class="sc-blink" cx="106" cy="91" rx="1.8" ry="2.2" fill="#2a1a1a"/>
+      <path d="M95 98 Q100 103 105 98" fill="none" stroke="#b3122a" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="90" cy="96" r="3" fill="#f08a8a" opacity=".5"/><circle cx="110" cy="96" r="3" fill="#f08a8a" opacity=".5"/>
+    </g>
+    ${[[24,176],[216,176],[40,150]].map(([x, y], i) => `<g transform="translate(${x} ${y}) scale(${i === 2 ? .6 : 1})"><g class="sc-flowerspin">${[0,60,120,180,240,300].map((a) => `<ellipse cx="0" cy="-10" rx="5.5" ry="10" fill="#ffd54a" transform="rotate(${a})"/>`).join("")}</g><circle r="5" fill="#f08a00"/></g>`).join("")}
+    ${[34,78,120,162,206].map((x, i) => `<circle class="sc-fall" style="--d:${i*.6}s" cx="${x}" cy="-6" r="${2.5+i%3}" fill="${i%2?'#f5a623':'#ffd54a'}"/>`).join("")}
+  </svg>`,
+  "ceremony-card": `<svg viewBox="0 0 240 200" aria-hidden="true">
+    <defs><linearGradient id="wedbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a4455a"/><stop offset="1" stop-color="#6a2433"/></linearGradient></defs>
+    <rect width="240" height="200" rx="14" fill="url(#wedbg)"/>
+    <circle class="sc-orbit2" cx="120" cy="110" r="84" fill="none" stroke="#e0b860" stroke-width="1.2" stroke-dasharray="3 7" opacity=".7"/>
+    <path d="M20 56 Q120 -8 220 56Z" fill="#762f3c" stroke="#e0b860" stroke-width="2.5"/>
+    ${Array.from({length: 11}, (_, i) => `<circle class="sc-bob" style="--d:${(i*.2).toFixed(1)}s" cx="${30 + i * 18}" cy="${58}" r="3.2" fill="#e0b860"/>`).join("")}
+    <rect x="22" y="56" width="7" height="144" fill="#ae8b53"/><rect x="211" y="56" width="7" height="144" fill="#ae8b53"/>
+    <!-- groom -->
+    <path d="M118 190 Q118 138 150 134 Q182 138 182 190Z" fill="#f1e6cf"/>
+    <path d="M132 142 L168 142 L150 158Z" fill="#e0b860"/>
+    <circle cx="150" cy="134" r="0" />
+    <circle cx="150" cy="104" r="17" fill="#d9a07a"/>
+    <path d="M132 100 C128 70 172 70 168 100 C162 86 138 86 132 100Z" fill="#c9374a" stroke="#e0b860" stroke-width="2"/>
+    <g class="sc-sway"><path d="M150 76 C144 62 147 54 150 48 C153 54 156 62 150 76Z" fill="#e0b860"/></g>
+    <ellipse class="sc-blink" cx="144" cy="106" rx="1.9" ry="2.3" fill="#1d1414"/><ellipse class="sc-blink" cx="156" cy="106" rx="1.9" ry="2.3" fill="#1d1414"/>
+    <path d="M144 114 Q150 119 156 114" fill="none" stroke="#7a2430" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M143 111 Q150 109 157 111" fill="none" stroke="#1d1414" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- bride -->
+    <path d="M58 190 Q58 138 90 134 Q122 138 122 190Z" fill="#b3122a"/>
+    <path d="M90 134 L118 190 L106 190 L84 144Z" fill="#e0b860"/>
+    <circle cx="90" cy="106" r="17" fill="#e8b48a"/>
+    <path d="M72 108 C66 70 114 70 108 108 C106 88 92 80 90 80 C88 80 74 88 72 108Z" fill="#c0392b" stroke="#e0b860" stroke-width="2"/>
+    <path d="M78 92 C84 80 96 80 102 92 C96 86 84 86 78 92Z" fill="#2a1a1a"/>
+    <circle cx="90" cy="88" r="2.4" fill="#b3122a"/>
+    <ellipse class="sc-blink" cx="84" cy="108" rx="1.9" ry="2.3" fill="#2a1a1a"/><ellipse class="sc-blink" cx="96" cy="108" rx="1.9" ry="2.3" fill="#2a1a1a"/>
+    <path d="M85 116 Q90 121 95 116" fill="none" stroke="#b3122a" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="80" cy="114" r="3" fill="#f08a8a" opacity=".5"/><circle cx="100" cy="114" r="3" fill="#f08a8a" opacity=".5"/>
+    <!-- garland between them -->
+    <path class="sc-garland" d="M92 140 Q120 176 148 140" fill="none" stroke="#ffd54a" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 9"/>
+    <path class="sc-garland" style="animation-delay:-.8s" d="M92 144 Q120 182 148 144" fill="none" stroke="#f08aa0" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 9"/>
+    ${[106,120,134].map((x, i) => `<text class="sc-heart" style="--d:${i*.8}s" x="${x}" y="110" font-size="${11+i%2*4}" fill="#ffb3c1">❤</text>`).join("")}
+    ${[44,196].map((x, i) => `<g><ellipse class="sc-flame" cx="${x}" cy="186" rx="4" ry="8" fill="#ff8a00"/><ellipse class="sc-flame in" cx="${x}" cy="188" rx="2" ry="4.5" fill="#ffd54a"/><path d="M${x-9} 194 Q${x} 200 ${x+9} 194Z" fill="#c9a85a"/></g>`).join("")}
+  </svg>`,
+  "reception-card": `<svg viewBox="0 0 240 140" aria-hidden="true">
+    <line x1="120" y1="0" x2="120" y2="16" stroke="#8a8a99" stroke-width="1.5"/>
+    <g class="sc-disco"><circle cx="120" cy="30" r="15" fill="#d6d6e6"/><ellipse class="sc-rot" cx="120" cy="30" rx="15" ry="15" fill="none" stroke="#9a9ab5" stroke-width="1"/><path d="M105 30H135M108 22H132M108 38H132" stroke="#9a9ab5" stroke-width="1"/></g>
+    ${[[60,24],[184,34],[84,60],[160,56],[40,70],[206,70]].map(([x,y],i) => `<text class="sc-twinkle" style="--d:${i*.4}s" x="${x}" y="${y}" font-size="13" fill="#ae8b53">✦</text>`).join("")}
+    <g class="sc-glass l"><path d="M-9 0 L9 0 L7 34 Q0 41 -7 34Z" fill="#fff0b3" fill-opacity=".75" stroke="#ae8b53" stroke-width="1.5"/><rect x="-1.5" y="38" width="3" height="22" fill="#ae8b53"/><ellipse cx="0" cy="62" rx="11" ry="3" fill="#ae8b53"/></g>
+    <g class="sc-glass r"><path d="M-9 0 L9 0 L7 34 Q0 41 -7 34Z" fill="#fff0b3" fill-opacity=".75" stroke="#ae8b53" stroke-width="1.5"/><rect x="-1.5" y="38" width="3" height="22" fill="#ae8b53"/><ellipse cx="0" cy="62" rx="11" ry="3" fill="#ae8b53"/></g>
+    ${[98,104,136,142,120].map((x,i) => `<circle class="sc-bubble" style="--d:${i*.45}s" cx="${x}" cy="84" r="${1.8+i%2}" fill="#fff"/>`).join("")}
+    <text class="sc-note" style="--d:0s" x="46" y="118" font-size="18" fill="#762f3c">♪</text><text class="sc-note" style="--d:1.1s" x="188" y="118" font-size="18" fill="#762f3c">♫</text>
+  </svg>`,
+};
+
 // Event cards: front shows title + date, click flips to reveal full details
 document.querySelectorAll(".event-card").forEach((card) => {
   const q = (s) => card.querySelector(s);
@@ -122,6 +201,13 @@ document.querySelectorAll(".event-card").forEach((card) => {
   const backTitle = q("h3").cloneNode(true);
   backTitle.className = "back-title";
   [".card-index", ".card-icon", "h3", ".event-date"].forEach((s) => front.append(q(s)));
+  const sceneKey = Object.keys(CARD_SCENES).find((k) => card.classList.contains(k));
+  if (sceneKey) {
+    const scene = document.createElement("div");
+    scene.className = "card-scene";
+    scene.innerHTML = CARD_SCENES[sceneKey];
+    front.insertBefore(scene, front.querySelector("h3"));
+  }
   const hint = document.createElement("span");
   hint.className = "flip-hint";
   hint.dataset.en = "TAP TO SEE DETAILS";
