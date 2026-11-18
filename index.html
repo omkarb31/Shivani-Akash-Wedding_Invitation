@@ -114,6 +114,36 @@
           </div>
         </section>
 
+        <section class="couple-section" id="couple">
+          <div class="section-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span><span data-en="MEET THE COUPLE" data-mr="वधू-वरांची ओळख">MEET THE COUPLE</span><span class="eyebrow-line"></span></p>
+            <h2 data-en="The bride &amp; the groom." data-mr="वधू आणि वर.">The bride &amp; the groom.</h2>
+          </div>
+          <!-- Dummy photos: replace media/bride.jpg and media/groom.jpg with your real photos (same filenames) -->
+          <div class="couple-grid">
+            <figure class="portrait portrait-bride" tabindex="0" role="button" aria-label="View Shivani's photo" data-name="Shivani" data-role-en="THE BRIDE" data-role-mr="वधू" data-bio-en="Our bride. A dreamer who loves music, marigolds and monsoon evenings, and who makes every room feel like home." data-bio-mr="आमची वधू. संगीत, झेंडूची फुले आणि पावसाळी संध्याकाळींवर प्रेम करणारी स्वप्नाळू मुलगी, जी प्रत्येक जागेला घरपण देते.">
+              <div class="portrait-frame">
+                <i class="sparkle s1">✦</i><i class="sparkle s2">✦</i><i class="sparkle s3">✧</i>
+                <img src="media/bride.jpg" alt="Shivani, the bride" loading="lazy" />
+              </div>
+              <figcaption><b>Shivani</b><span data-en="THE BRIDE" data-mr="वधू">THE BRIDE</span></figcaption>
+            </figure>
+
+            <div class="couple-heart" aria-hidden="true">
+              <span class="big-heart">❤</span>
+              <i>❤</i><i>❤</i><i>❤</i><i>❤</i><i>❤</i><i>❤</i>
+            </div>
+
+            <figure class="portrait portrait-groom" tabindex="0" role="button" aria-label="View Akash's photo" data-name="Akash" data-role-en="THE GROOM" data-role-mr="वर" data-bio-en="Our groom. A gentle soul with a big laugh and an even bigger heart, always ready for the next adventure with Shivani." data-bio-mr="आमचा वर. मोठ्याने हसणारा आणि मोठ्या मनाचा, शिवानीसोबत प्रत्येक नव्या प्रवासासाठी सदैव तयार असणारा शांत स्वभावाचा तरुण.">
+              <div class="portrait-frame">
+                <i class="sparkle s1">✦</i><i class="sparkle s2">✧</i><i class="sparkle s3">✦</i>
+                <img src="media/groom.jpg" alt="Akash, the groom" loading="lazy" />
+              </div>
+              <figcaption><b>Akash</b><span data-en="THE GROOM" data-mr="वर">THE GROOM</span></figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section class="details-section" id="celebration">
           <div class="section-heading">
             <p class="eyebrow"><span class="eyebrow-line"></span><span data-en="SAVE THE DATE" data-mr="तारीख लक्षात ठेवा">SAVE THE DATE</span><span class="eyebrow-line"></span></p>
@@ -224,6 +254,21 @@
         <span data-en="MADE WITH LOVE FOR OUR FAVOURITE PEOPLE" data-mr="आमच्या लाडक्या माणसांसाठी प्रेमाने">MADE WITH LOVE FOR OUR FAVOURITE PEOPLE</span>
         <span>© SHIVANI &amp; AKASH · 2026</span>
       </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo" hidden>
+      <button class="lb-nav lb-prev" type="button" aria-label="Previous">‹</button>
+      <div class="lb-card">
+        <button class="lb-close" type="button" aria-label="Close">×</button>
+        <div class="lb-media"></div>
+        <div class="lb-text">
+          <span class="lb-role"></span>
+          <h3 class="lb-name"></h3>
+          <p class="lb-bio"></p>
+          <span class="lb-hint" data-en="‹ › SWIPE OR USE ARROWS" data-mr="‹ › स्वाइप करा किंवा बाणांचा वापर करा">‹ › SWIPE OR USE ARROWS</span>
+        </div>
+      </div>
+      <button class="lb-nav lb-next" type="button" aria-label="Next">›</button>
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>

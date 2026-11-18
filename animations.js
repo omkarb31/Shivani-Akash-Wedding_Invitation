@@ -47,6 +47,9 @@ document.querySelectorAll("#heroArch, #storyVideo").forEach(setupHoverVideo);
     [".reception-card", "reveal reveal-right"],
     [".utility-row > *", "reveal"],
     [".closing-note > *", "reveal reveal-zoom"],
+    [".portrait-bride", "reveal reveal-left"],
+    [".portrait-groom", "reveal reveal-right"],
+    [".couple-heart", "reveal reveal-zoom"],
     [".haldi-card", "reveal reveal-zoom"],
     [".moment", "reveal reveal-zoom"],
     [".location-map", "reveal reveal-left"],
@@ -149,6 +152,58 @@ document.querySelectorAll(".event-card").forEach((card) => {
     if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
   });
 });
+
+// Photo lightbox: click Shivani or Akash to see their individual photo
+(function lightbox() {
+  const lb = document.getElementById("lightbox");
+  const media = lb.querySelector(".lb-media");
+  const people = Array.from(document.querySelectorAll(".portrait"));
+  let index = 0;
+  let touchX = 0;
+  function render() {
+    const p = people[index];
+    const d = p.dataset;
+    media.innerHTML = p.querySelector(".portrait-frame").innerHTML;
+    media.className = "lb-media " + (p.classList.contains("portrait-bride") ? "is-bride" : "is-groom");
+    lb.querySelector(".lb-name").textContent = d.name;
+    lb.querySelector(".lb-role").innerHTML = d["role" + (currentLanguage === "mr" ? "Mr" : "En")];
+    lb.querySelector(".lb-bio").textContent = d["bio" + (currentLanguage === "mr" ? "Mr" : "En")];
+    lb.classList.remove("swap"); void lb.offsetWidth; lb.classList.add("swap");
+  }
+  function open(i) {
+    index = i; render();
+    lb.hidden = false;
+    requestAnimationFrame(() => lb.classList.add("show"));
+    document.body.style.overflow = "hidden";
+    lb.querySelector(".lb-close").focus();
+  }
+  function close() {
+    lb.classList.remove("show");
+    document.body.style.overflow = "";
+    setTimeout(() => { lb.hidden = true; }, 400);
+    people[index].focus({ preventScroll: true });
+  }
+  const step = (n) => { index = (index + n + people.length) % people.length; render(); };
+  people.forEach((p, i) => {
+    p.addEventListener("click", () => open(i));
+    p.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(i); } });
+  });
+  lb.querySelector(".lb-close").addEventListener("click", close);
+  lb.querySelector(".lb-prev").addEventListener("click", () => step(-1));
+  lb.querySelector(".lb-next").addEventListener("click", () => step(1));
+  lb.addEventListener("click", (e) => { if (e.target === lb) close(); });
+  window.addEventListener("keydown", (e) => {
+    if (lb.hidden) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") step(-1);
+    if (e.key === "ArrowRight") step(1);
+  });
+  lb.addEventListener("touchstart", (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
+  });
+})();
 
 // Opening gate
 (function gate() {
