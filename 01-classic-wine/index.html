@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5efe4" />
+    <meta
+      name="description"
+      content="A celebration of love: the wedding invitation of Shivani and Akash."
+    />
+    <title>Shivani &amp; Akash — Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=6" />
+    <link rel="stylesheet" href="animations.css?v=6" />
+    <script src="script.js?v=6" defer></script>
+    <script src="animations.js?v=6" defer></script>
+      <style>.back-hub{position:fixed;left:12px;bottom:12px;z-index:90;padding:9px 14px;font:600 9px "DM Sans",sans-serif;letter-spacing:.16em;text-decoration:none;color:#ead8b8;background:#762f3c;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .3s}.back-hub:hover{transform:translateY(-3px)}body.locked .back-hub{display:none}</style>
+  </head>
+  <body class="locked">
+    <div class="gate" id="gate">
+      <div class="gate-door gate-left"></div>
+      <div class="gate-door gate-right"></div>
+      <div class="gate-content">
+        <span class="gate-flower" aria-hidden="true">✿</span>
+        <span class="gate-kicker" data-en="YOU ARE INVITED TO THE WEDDING OF" data-mr="आपण शुभविवाहास आमंत्रित आहात">YOU ARE INVITED TO THE WEDDING OF</span>
+        <h1 class="gate-names">Shivani <span>&amp;</span> Akash</h1>
+        <span class="gate-date" data-en="12 · 12 · 2026 · PUNE" data-mr="१२ · १२ · २०२६ · पुणे">12 · 12 · 2026 · PUNE</span>
+        <button class="gate-button" id="openInvite" type="button"><span data-en="OPEN INVITATION" data-mr="निमंत्रण उघडा">OPEN INVITATION</span><i aria-hidden="true">→</i></button>
+      </div>
+    </div>
+    <div class="petals" id="petals" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="page-frame">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Shivani and Akash, home">
+          <span class="brand-mark">S<span>&amp;</span>A</span>
+          <span class="brand-caption" data-en="A DAY TO REMEMBER" data-mr="अविस्मरणीय दिवस">A DAY TO REMEMBER</span>
+        </a>
+        <nav class="top-actions" aria-label="Invitation controls">
+          <a class="nav-link" href="#celebration" data-en="The celebration" data-mr="सोहळा">The celebration</a>
+          <button class="language-switch" id="languageToggle" type="button" aria-label="Switch to Marathi">
+            <span class="language-dot"></span>
+            <span id="languageLabel">मराठी</span>
+          </button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span><span data-en="WITH THE BLESSINGS OF OUR FAMILIES" data-mr="आमच्या कुटुंबीयांच्या आशीर्वादाने">WITH THE BLESSINGS OF OUR FAMILIES</span><span class="eyebrow-line"></span></p>
+            <h1 class="hero-title">
+              <span data-en="Two hearts," data-mr="दोन हृदये,">Two hearts,</span>
+              <em data-en="one beautiful beginning." data-mr="एक सुंदर सुरुवात.">one beautiful beginning.</em>
+            </h1>
+            <p class="hero-intro" data-en="With joy in our hearts, we invite you to be part of the day our forever begins." data-mr="आमच्या आयुष्याच्या नव्या सुरुवातीच्या या आनंदाच्या क्षणी, आपण सहकुटुंब उपस्थित राहावे ही प्रेमळ विनंती.">With joy in our hearts, we invite you to be part of the day our forever begins.</p>
+            <a class="text-link" href="#celebration"><span data-en="COME CELEBRATE WITH US" data-mr="आमच्यासोबत आनंद साजरा करा">COME CELEBRATE WITH US</span><span aria-hidden="true">↘</span></a>
+          </div>
+
+          <div class="invitation-art" aria-label="Decorative wedding invitation illustration">
+            <div class="sun-disc"></div>
+            <div class="arch arch-back"></div>
+            <div class="arch arch-front" id="heroArch" tabindex="0" aria-label="Hover to play our video">
+              <video class="arch-video" muted loop playsinline preload="auto" src="media/dummy.mp4"></video>
+              <div class="arch-veil"></div>
+              <span class="play-hint" aria-hidden="true"><i>▶</i><span data-en="HOVER TO PLAY" data-mr="पाहण्यासाठी हलवा">HOVER TO PLAY</span></span>
+              <div class="arch-inner">
+                <span class="art-kicker" data-en="THE WEDDING OF" data-mr="शुभविवाह">THE WEDDING OF</span>
+                <span class="art-name">Shivani</span>
+                <span class="ampersand">&amp;</span>
+                <span class="art-name">Akash</span>
+                <span class="art-date" data-en="12 · 12 · 2026" data-mr="१२ · १२ · २०२६">12 · 12 · 2026</span>
+              </div>
+            </div>
+            <div class="flower flower-one" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b></div>
+            <div class="flower flower-two" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b></div>
+            <div class="leaf-spray spray-one" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="leaf-spray spray-two" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <span class="art-side-note" data-en="MADE FOR EACH OTHER" data-mr="एकमेकांसाठी">MADE FOR EACH OTHER</span>
+          </div>
+          <div class="hero-bottom">
+            <span data-en="SATURDAY · PUNE, INDIA" data-mr="शनिवार · पुणे, भारत">SATURDAY · PUNE, INDIA</span>
+            <span class="scroll-cue"><span></span><span data-en="SCROLL TO EXPLORE" data-mr="पुढे पाहण्यासाठी स्क्रोल करा">SCROLL TO EXPLORE</span></span>
+            <span data-en="18°31′N 73°51′E" data-mr="१८°३१′उ ७३°५१′पू">18°31′N 73°51′E</span>
+          </div>
+          <span class="hero-sparkle sparkle-one" aria-hidden="true">✳</span>
+          <span class="hero-sparkle sparkle-two" aria-hidden="true">✳</span>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>SHIVANI ✿ AKASH ✿ 12 · 12 · 2026 ✿ PUNE ✿ FOREVER BEGINS ✿ SHIVANI ✿ AKASH ✿ 12 · 12 · 2026 ✿ PUNE ✿ FOREVER BEGINS ✿ </span>
+            <span>SHIVANI ✿ AKASH ✿ 12 · 12 · 2026 ✿ PUNE ✿ FOREVER BEGINS ✿ SHIVANI ✿ AKASH ✿ 12 · 12 · 2026 ✿ PUNE ✿ FOREVER BEGINS ✿ </span>
+          </div>
+        </div>
+
+        <section class="story-section" id="story">
+          <div class="story-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span><span data-en="OUR STORY" data-mr="आमची गोष्ट">OUR STORY</span></p>
+            <h2 data-en="A little film of us." data-mr="आमचा छोटासा चित्रपट.">A little film of us.</h2>
+            <p class="section-intro" data-en="Move your cursor over the frame and watch our story come alive." data-mr="चौकटीवर कर्सर न्या आणि आमची गोष्ट जिवंत होताना पाहा.">Move your cursor over the frame and watch our story come alive.</p>
+          </div>
+          <div class="story-video" id="storyVideo" tabindex="0">
+            <video muted loop playsinline preload="auto" src="media/dummy.mp4"></video>
+            <div class="story-overlay">
+              <span class="story-play"><i>▶</i></span>
+              <span class="story-label" data-en="HOVER TO PLAY" data-mr="पाहण्यासाठी हलवा">HOVER TO PLAY</span>
+            </div>
+            <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+          </div>
+        </section>
+
+        <section class="couple-section" id="couple">
+          <div class="section-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span><span data-en="MEET THE COUPLE" data-mr="वधू-वरांची ओळख">MEET THE COUPLE</span><span class="eyebrow-line"></span></p>
+            <h2 data-en="The bride &amp; the groom." data-mr="वधू आणि वर.">The bride &amp; the groom.</h2>
+          </div>
+          <!-- Dummy photos: replace media/bride.jpg and media/groom.jpg with your real photos (same filenames) -->
+          <div class="couple-grid">
+            <figure class="portrait portrait-bride" tabindex="0" role="button" aria-label="View Shivani's photo" data-name="Shivani" data-role-en="THE BRIDE" data-role-mr="वधू" data-bio-en="Our bride. A dreamer who loves music, marigolds and monsoon evenings, and who makes every room feel like home." data-bio-mr="आमची वधू. संगीत, झेंडूची फुले आणि पावसाळी संध्याकाळींवर प्रेम करणारी स्वप्नाळू मुलगी, जी प्रत्येक जागेला घरपण देते.">
+              <div class="portrait-frame">
+                <i class="sparkle s1">✦</i><i class="sparkle s2">✦</i><i class="sparkle s3">✧</i>
+                <img src="media/bride.jpg" alt="Shivani, the bride" loading="lazy" />
+              </div>
+              <figcaption><b>Shivani</b><span data-en="THE BRIDE" data-mr="वधू">THE BRIDE</span></figcaption>
+            </figure>
+
+            <div class="couple-heart" aria-hidden="true">
+              <span class="big-heart">❤</span>
+              <i>❤</i><i>❤</i><i>❤</i><i>❤</i><i>❤</i><i>❤</i>
+            </div>
+
+            <figure class="portrait portrait-groom" tabindex="0" role="button" aria-label="View Akash's photo" data-name="Akash" data-role-en="THE GROOM" data-role-mr="वर" data-bio-en="Our groom. A gentle soul with a big laugh and an even bigger heart, always ready for the next adventure with Shivani." data-bio-mr="आमचा वर. मोठ्याने हसणारा आणि मोठ्या मनाचा, शिवानीसोबत प्रत्येक नव्या प्रवासासाठी सदैव तयार असणारा शांत स्वभावाचा तरुण.">
+              <div class="portrait-frame">
+                <i class="sparkle s1">✦</i><i class="sparkle s2">✧</i><i class="sparkle s3">✦</i>
+                <img src="media/groom.jpg" alt="Akash, the groom" loading="lazy" />
+              </div>
+              <figcaption><b>Akash</b><span data-en="THE GROOM" data-mr="वर">THE GROOM</span></figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="details-section" id="celebration">
+          <div class="section-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span><span data-en="SAVE THE DATE" data-mr="तारीख लक्षात ठेवा">SAVE THE DATE</span><span class="eyebrow-line"></span></p>
+            <h2 data-en="The best moments are better together." data-mr="आनंदाचे क्षण, आपल्या माणसांसोबत.">The best moments are better together.</h2>
+            <p class="section-intro" data-en="A day of traditions, happy tears, and a whole lot of dancing. We can’t wait to celebrate with you." data-mr="परंपरा, आनंदाश्रू आणि भरपूर नृत्याने सजलेला हा खास दिवस. तुमच्यासोबत आनंद साजरा करण्यासाठी आम्ही उत्सुक आहोत.">A day of traditions, happy tears, and a whole lot of dancing. We can’t wait to celebrate with you.</p>
+          </div>
+
+          <div class="countdown-wrap">
+            <span class="countdown-label" data-en="COUNTING DOWN TO FOREVER" data-mr="नव्या प्रवासाची उलटगणती">COUNTING DOWN TO FOREVER</span>
+            <div class="countdown" aria-label="Countdown to the wedding">
+              <div class="count-item"><span id="days">000</span><small data-en="DAYS" data-mr="दिवस">DAYS</small></div>
+              <span class="count-separator">:</span>
+              <div class="count-item"><span id="hours">00</span><small data-en="HOURS" data-mr="तास">HOURS</small></div>
+              <span class="count-separator">:</span>
+              <div class="count-item"><span id="minutes">00</span><small data-en="MINUTES" data-mr="मिनिटे">MINUTES</small></div>
+              <span class="count-separator">:</span>
+              <div class="count-item"><span id="seconds">00</span><small data-en="SECONDS" data-mr="सेकंद">SECONDS</small></div>
+            </div>
+          </div>
+
+          <div class="event-grid">
+            <article class="event-card haldi-card">
+              <span class="card-index">01 / THE HALDI</span>
+              <div class="card-icon" aria-hidden="true">❁</div>
+              <h3 data-en="Haldi Ceremony" data-mr="हळदी समारंभ">Haldi Ceremony</h3>
+              <p class="event-date" data-en="Friday, December 11, 2026" data-mr="शुक्रवार, ११ डिसेंबर २०२६">Friday, December 11, 2026</p>
+              <p class="event-time" data-en="Haldi rituals from 10:00 in the morning" data-mr="हळदी विधी सकाळी १०:०० पासून">Haldi rituals from 10:00 in the morning</p>
+              <div class="card-rule"></div>
+              <p class="venue-name" data-en="Sunshine Lawns, Kothrud" data-mr="सनशाइन लॉन्स, कोथरूड">Sunshine Lawns, Kothrud</p>
+              <p class="venue-address" data-en="45 Garden Lane, Kothrud<br />Pune, Maharashtra 411038<br /><em>Dress code: yellow &amp; white</em>" data-mr="४५ गार्डन लेन, कोथरूड<br />पुणे, महाराष्ट्र ४११०३८<br /><em>पोशाख: पिवळा आणि पांढरा</em>">45 Garden Lane, Kothrud<br />Pune, Maharashtra 411038<br /><em>Dress code: yellow &amp; white</em></p>
+              <a class="map-link" href="https://maps.google.com/?q=Kothrud+Pune" target="_blank" rel="noreferrer"><span data-en="GET DIRECTIONS" data-mr="मार्ग पहा">GET DIRECTIONS</span><span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="event-card ceremony-card">
+              <span class="card-index">02 / THE CEREMONY</span>
+              <div class="card-icon" aria-hidden="true">✳</div>
+              <h3 data-en="The Wedding Ceremony" data-mr="विवाह सोहळा">The Wedding Ceremony</h3>
+              <p class="event-date" data-en="Saturday, December 12, 2026" data-mr="शनिवार, १२ डिसेंबर २०२६">Saturday, December 12, 2026</p>
+              <p class="event-time" data-en="Muhurta at 11:30 in the morning" data-mr="शुभमुहूर्त सकाळी ११:३० वाजता">Muhurta at 11:30 in the morning</p>
+              <div class="card-rule"></div>
+              <p class="venue-name" data-en="The Gulmohar Courtyard" data-mr="गुलमोहर प्रांगण">The Gulmohar Courtyard</p>
+              <p class="venue-address" data-en="12 Riverside Road, Koregaon Park<br />Pune, Maharashtra 411001" data-mr="१२ रिव्हरसाइड रोड, कोरेगाव पार्क<br />पुणे, महाराष्ट्र ४११००१">12 Riverside Road, Koregaon Park<br />Pune, Maharashtra 411001</p>
+              <a class="map-link" href="https://maps.google.com/?q=Koregaon+Park+Pune" target="_blank" rel="noreferrer"><span data-en="GET DIRECTIONS" data-mr="मार्ग पहा">GET DIRECTIONS</span><span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="event-card reception-card">
+              <span class="card-index">03 / THE CELEBRATION</span>
+              <div class="card-icon" aria-hidden="true">✴</div>
+              <h3 data-en="Dinner &amp; Dancing" data-mr="स्नेहभोजन आणि संगीत">Dinner &amp; Dancing</h3>
+              <p class="event-date" data-en="Saturday, December 12, 2026" data-mr="शनिवार, १२ डिसेंबर २०२६">Saturday, December 12, 2026</p>
+              <p class="event-time" data-en="Dinner and dancing from 7:00 PM" data-mr="स्नेहभोजन आणि संगीत संध्याकाळी ७:०० पासून">Dinner and dancing from 7:00 PM</p>
+              <div class="card-rule"></div>
+              <p class="venue-name" data-en="The Gulmohar Courtyard" data-mr="गुलमोहर प्रांगण">The Gulmohar Courtyard</p>
+              <p class="venue-address" data-en="12 Riverside Road, Koregaon Park<br />Pune, Maharashtra 411001" data-mr="१२ रिव्हरसाइड रोड, कोरेगाव पार्क<br />पुणे, महाराष्ट्र ४११००१">12 Riverside Road, Koregaon Park<br />Pune, Maharashtra 411001</p>
+              <a class="map-link" href="https://maps.google.com/?q=Koregaon+Park+Pune" target="_blank" rel="noreferrer"><span data-en="GET DIRECTIONS" data-mr="मार्ग पहा">GET DIRECTIONS</span><span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+
+          <div class="utility-row">
+            <p data-en="A little something to help you plan your day." data-mr="तुमचा दिवस सुंदर व्हावा यासाठी काही खास.">A little something to help you plan your day.</p>
+            <button class="outline-button" id="calendarButton" type="button"><span aria-hidden="true">＋</span><span data-en="ADD TO CALENDAR" data-mr="कॅलेंडरमध्ये जोडा">ADD TO CALENDAR</span></button>
+            <button class="outline-button" id="copyAddressButton" type="button"><span aria-hidden="true">⌖</span><span data-en="COPY VENUE ADDRESS" data-mr="पत्त्याची प्रत करा">COPY VENUE ADDRESS</span></button>
+          </div>
+        </section>
+
+        <section class="moments-section" id="moments">
+          <div class="section-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span><span data-en="MOMENTS" data-mr="क्षण">MOMENTS</span><span class="eyebrow-line"></span></p>
+            <h2 data-en="Little moments of Shivani &amp; Akash." data-mr="शिवानी आणि आकाशचे सुंदर क्षण.">Little moments of Shivani &amp; Akash.</h2>
+          </div>
+          <!-- To use real photos: put <img src="media/yourphoto.jpg" alt=""> inside any .moment figure (before figcaption) -->
+          <div class="moments-grid">
+            <figure class="moment m1"><span class="moment-art" aria-hidden="true">👰</span><figcaption data-en="The Bride · Shivani" data-mr="वधू · शिवानी">The Bride · Shivani</figcaption></figure>
+            <figure class="moment m2"><span class="moment-art" aria-hidden="true">🤵</span><figcaption data-en="The Groom · Akash" data-mr="वर · आकाश">The Groom · Akash</figcaption></figure>
+            <figure class="moment m3"><span class="moment-art" aria-hidden="true">☕</span><figcaption data-en="Where it began" data-mr="जिथे सुरुवात झाली">Where it began</figcaption></figure>
+            <figure class="moment m4"><span class="moment-art" aria-hidden="true">💍</span><figcaption data-en="The proposal" data-mr="मागणी">The proposal</figcaption></figure>
+            <figure class="moment m5"><span class="moment-art" aria-hidden="true">✈️</span><figcaption data-en="Our adventures" data-mr="आमची भटकंती">Our adventures</figcaption></figure>
+            <figure class="moment m6"><span class="moment-art" aria-hidden="true">💞</span><figcaption data-en="Forever starts here" data-mr="इथून आयुष्यभर">Forever starts here</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="location-section" id="location">
+          <div class="location-map">
+            <iframe title="Wedding venue map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Koregaon+Park+Pune&amp;output=embed"></iframe>
+            <span class="map-pin" aria-hidden="true">📍</span>
+          </div>
+          <div class="location-info">
+            <p class="eyebrow"><span class="eyebrow-line"></span><span data-en="THE LOCATION" data-mr="स्थळ">THE LOCATION</span></p>
+            <h2 data-en="Find your way to us." data-mr="आमच्यापर्यंत पोहोचा.">Find your way to us.</h2>
+            <p class="venue-name" data-en="The Gulmohar Courtyard" data-mr="गुलमोहर प्रांगण">The Gulmohar Courtyard</p>
+            <p class="venue-address" data-en="12 Riverside Road, Koregaon Park<br />Pune, Maharashtra 411001" data-mr="१२ रिव्हरसाइड रोड, कोरेगाव पार्क<br />पुणे, महाराष्ट्र ४११००१">12 Riverside Road, Koregaon Park<br />Pune, Maharashtra 411001</p>
+            <ul class="travel-list">
+              <li><b>✈</b><span data-en="Pune Airport · 10 km, ~25 min" data-mr="पुणे विमानतळ · १० किमी, सुमारे २५ मिनिटे">Pune Airport · 10 km, ~25 min</span></li>
+              <li><b>🚆</b><span data-en="Pune Junction · 3 km, ~10 min" data-mr="पुणे जंक्शन · ३ किमी, सुमारे १० मिनिटे">Pune Junction · 3 km, ~10 min</span></li>
+              <li><b>🚗</b><span data-en="Free valet parking at the venue" data-mr="स्थळी मोफत व्हॅलेट पार्किंग">Free valet parking at the venue</span></li>
+            </ul>
+            <a class="map-link" href="https://maps.google.com/?q=Koregaon+Park+Pune" target="_blank" rel="noreferrer"><span data-en="OPEN IN GOOGLE MAPS" data-mr="गुगल मॅप्समध्ये उघडा">OPEN IN GOOGLE MAPS</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
+
+        <section class="closing-note">
+          <span class="closing-flower" aria-hidden="true">✿</span>
+          <p data-en="With love, and a little bit of forever" data-mr="प्रेमाने, आणि आयुष्यभराच्या सोबतीने">With love, and a little bit of forever</p>
+          <h2>Shivani <span>&amp;</span> Akash</h2>
+          <span class="closing-date" data-en="12.12.2026 · PUNE" data-mr="१२.१२.२०२६ · पुणे">12.12.2026 · PUNE</span>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span data-en="MADE WITH LOVE FOR OUR FAVOURITE PEOPLE" data-mr="आमच्या लाडक्या माणसांसाठी प्रेमाने">MADE WITH LOVE FOR OUR FAVOURITE PEOPLE</span>
+        <span>© SHIVANI &amp; AKASH · 2026</span>
+      </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo" hidden>
+      <button class="lb-nav lb-prev" type="button" aria-label="Previous">‹</button>
+      <div class="lb-card">
+        <button class="lb-close" type="button" aria-label="Close">×</button>
+        <div class="lb-media"></div>
+        <div class="lb-text">
+          <span class="lb-role"></span>
+          <h3 class="lb-name"></h3>
+          <p class="lb-bio"></p>
+          <span class="lb-hint" data-en="‹ › SWIPE OR USE ARROWS" data-mr="‹ › स्वाइप करा किंवा बाणांचा वापर करा">‹ › SWIPE OR USE ARROWS</span>
+        </div>
+      </div>
+      <button class="lb-nav lb-next" type="button" aria-label="Next">›</button>
+    </div>
+
+    <a class="back-hub" href="../index.html">← ALL DESIGNS</a>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

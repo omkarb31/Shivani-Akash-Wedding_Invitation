@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0e1530" />
+<title>Shivani &amp; Akash — Royal Maharaja</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared/core.css?v=7" />
+<link rel="stylesheet" href="style.css?v=7" />
+<script defer src="shared/content.js?v=7"></script>
+<script defer src="shared/core.js?v=7"></script>
+<script defer src="app.js?v=7"></script>
+</head>
+<body class="locked">
+
+<!-- palace gate -->
+<div class="gate" data-gate>
+  <div class="door door-l"></div><div class="door door-r"></div>
+  <div class="gate-card">
+    <span class="gate-crest">❖</span>
+    <span class="gate-small" data-i="invited"></span>
+    <h1 class="gate-names">Shivani <i>&amp;</i> Akash</h1>
+    <span class="gate-small" data-i="date"></span>
+    <button class="gate-btn" data-open type="button"><span data-i="open"></span><b>→</b></button>
+  </div>
+</div>
+
+<div class="lanterns" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+<header class="top">
+  <span class="mono">S <b>❖</b> A</span>
+  <button class="lang" data-lang-toggle type="button"><span data-lang-label></span></button>
+</header>
+<nav class="dotnav" aria-label="Sections">
+  <a href="#home" data-i-label="nav_home"><span data-i="nav_home"></span></a>
+  <a href="#invite" data-i-label="savedate"><span data-i="savedate"></span></a>
+  <a href="#rituals" data-i-label="nav_events"><span data-i="nav_events"></span></a>
+  <a href="#couple" data-i-label="nav_couple"><span data-i="nav_couple"></span></a>
+  <a href="#venue" data-i-label="nav_venue"><span data-i="nav_venue"></span></a>
+</nav>
+
+<main>
+  <!-- CHAPTER 1: the jharokha window -->
+  <section class="ch hero" id="home">
+    <div class="jharokha">
+      <div class="mandala" aria-hidden="true"></div>
+      <div class="jh-in">
+        <span class="small" data-i="kicker"></span>
+        <h2 class="jh-name">Shivani</h2>
+        <span class="jh-amp">❖</span>
+        <h2 class="jh-name">Akash</h2>
+        <span class="small" data-i="date"></span>
+      </div>
+    </div>
+    <p class="tag rv" data-i="tagline"></p>
+    <span class="cue" aria-hidden="true">⌄</span>
+  </section>
+
+  <!-- CHAPTER 2: invitation + countdown medallions -->
+  <section class="ch invite" id="invite">
+    <p class="small rv" data-i="blessings"></p>
+    <h2 class="h rv" data-i="savedate"></h2>
+    <p class="lead rv" data-i="intro"></p>
+    <div class="medallions rv">
+      <div class="med"><b data-cd="days">000</b><small data-i="days"></small></div>
+      <div class="med"><b data-cd="hours">00</b><small data-i="hours"></small></div>
+      <div class="med"><b data-cd="minutes">00</b><small data-i="minutes"></small></div>
+      <div class="med"><b data-cd="seconds">00</b><small data-i="seconds"></small></div>
+    </div>
+    <div class="btns rv">
+      <button class="ghost" data-action="calendar" type="button">＋ <span data-i="calendar"></span></button>
+      <button class="ghost" data-action="copy" type="button">⌖ <span data-i="copy"></span></button>
+    </div>
+  </section>
+
+  <!-- CHAPTER 3: three pillars (accordion) -->
+  <section class="ch rituals" id="rituals">
+    <h2 class="h rv" data-i="events_h"></h2>
+    <div class="pillars" id="pillars">
+      <article class="pillar active" tabindex="0" role="button" aria-expanded="true">
+        <span class="p-day" data-i="day1"></span>
+        <span class="p-ico">❁</span>
+        <h3 data-i="haldi_name"></h3>
+        <div class="p-body">
+          <p class="p-date" data-i="haldi_date"></p><p data-i="haldi_time"></p>
+          <hr><p class="p-venue" data-i="haldi_venue"></p><p class="p-addr" data-i="haldi_addr" data-html></p>
+          <p class="p-note" data-i="haldi_note"></p>
+          <a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Kothrud+Pune"><span data-i="directions"></span> ↗</a>
+        </div>
+      </article>
+      <article class="pillar" tabindex="0" role="button" aria-expanded="false">
+        <span class="p-day" data-i="day2"></span>
+        <span class="p-ico">❖</span>
+        <h3 data-i="wed_name"></h3>
+        <div class="p-body">
+          <p class="p-date" data-i="wed_date"></p><p data-i="wed_time"></p>
+          <hr><p class="p-venue" data-i="wed_venue"></p><p class="p-addr" data-i="wed_addr" data-html></p>
+          <p class="p-note" data-i="wed_note"></p>
+          <a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a>
+        </div>
+      </article>
+      <article class="pillar" tabindex="0" role="button" aria-expanded="false">
+        <span class="p-day" data-i="evening"></span>
+        <span class="p-ico">✦</span>
+        <h3 data-i="rec_name"></h3>
+        <div class="p-body">
+          <p class="p-date" data-i="rec_date"></p><p data-i="rec_time"></p>
+          <hr><p class="p-venue" data-i="rec_venue"></p><p class="p-addr" data-i="rec_addr" data-html></p>
+          <p class="p-note" data-i="rec_note"></p>
+          <a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CHAPTER 4: the royal couple -->
+  <section class="ch couple" id="couple">
+    <h2 class="h rv" data-i="couple_h"></h2>
+    <div class="royal-couple">
+      <figure class="royal rv" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio">
+        <div class="oval"><img src="media/bride.jpg" alt="Shivani" loading="lazy" /></div>
+        <figcaption><b>Shivani</b><span data-i="bride_role"></span></figcaption>
+      </figure>
+      <div class="crest rv" data-hovervideo tabindex="0">
+        <video muted loop playsinline preload="auto" src="media/dummy.mp4"></video>
+        <span class="crest-ring"></span>
+        <span class="crest-play" data-i="hover"></span>
+      </div>
+      <figure class="royal rv" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio">
+        <div class="oval"><img src="media/groom.jpg" alt="Akash" loading="lazy" /></div>
+        <figcaption><b>Akash</b><span data-i="groom_role"></span></figcaption>
+      </figure>
+    </div>
+    <p class="lead rv" data-i="story_p"></p>
+  </section>
+
+  <!-- CHAPTER 5: venue + closing -->
+  <section class="ch venue" id="venue">
+    <h2 class="h rv" data-i="venue_h"></h2>
+    <div class="venue-grid">
+      <div class="map rv"><iframe title="Venue map" loading="lazy" src="https://maps.google.com/maps?q=Koregaon+Park+Pune&amp;output=embed"></iframe><i></i><i></i><i></i><i></i></div>
+      <div class="v-info rv">
+        <p class="p-venue" data-i="wed_venue"></p>
+        <p class="p-addr" data-i="wed_addr" data-html></p>
+        <ul><li>✈ <span data-i="airport"></span></li><li>🚆 <span data-i="train"></span></li><li>🚗 <span data-i="parking"></span></li></ul>
+        <a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="openmap"></span> ↗</a>
+      </div>
+    </div>
+    <footer class="end rv">
+      <span class="crest-s">❖</span>
+      <p data-i="closing"></p>
+      <h2>Shivani <i>&amp;</i> Akash</h2>
+      <small data-i="footer"></small>
+    </footer>
+  </section>
+</main>
+<a class="back-hub" href="../index.html" data-i="back"></a>
+</body>
+</html>

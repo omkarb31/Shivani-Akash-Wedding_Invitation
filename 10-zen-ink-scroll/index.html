@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f4efe6" />
+<title>Shivani &amp; Akash — Ink &amp; Paper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared/core.css?v=8" />
+<link rel="stylesheet" href="style.css?v=8" />
+<script defer src="shared/content.js?v=8"></script>
+<script defer src="shared/core.js?v=8"></script>
+<script defer src="app.js?v=8"></script>
+</head>
+<body class="locked">
+
+<!-- gate: ink floods the page -->
+<div class="gate" data-gate>
+  <div class="ink-drop"></div>
+  <div class="g-in">
+    <span class="hanko">愛</span>
+    <p class="g-s" data-i="invited"></p>
+    <h1 class="g-n">Shivani<em>&amp;</em>Akash</h1>
+    <button class="g-btn" data-open type="button"><span data-i="open"></span></button>
+  </div>
+</div>
+
+<header class="top"><span class="seal">S&amp;A</span><button class="lang" data-lang-toggle type="button"><span data-lang-label></span></button></header>
+<nav class="dots" id="dots" aria-label="Panels"></nav>
+<div class="progress"><i id="bar"></i></div>
+<button class="arrow l" id="pl" type="button" aria-label="Previous">‹</button><button class="arrow r" id="pr" type="button" aria-label="Next">›</button>
+
+<main id="scroll">
+  <!-- 1 title -->
+  <section class="panel p-title" data-name="nav_home">
+    <div class="v-names"><h1 class="vname a">Shivani</h1><span class="enso" aria-hidden="true"></span><h1 class="vname b">Akash</h1></div>
+    <div class="t-copy">
+      <span class="hanko big">愛</span>
+      <p class="small" data-i="blessings"></p>
+      <p class="tag" data-i="tagline"></p>
+      <p class="vdate"><span data-i="date"></span></p>
+      <p class="hint" aria-hidden="true">⟶</p>
+    </div>
+  </section>
+
+  <!-- 2 invitation + countdown -->
+  <section class="panel p-inv" data-name="savedate">
+    <div class="col">
+      <p class="small" data-i="savedate"></p>
+      <p class="lead" data-i="intro"></p>
+      <div class="cd"><div><b data-cd="days">000</b><small data-i="days"></small></div><div><b data-cd="hours">00</b><small data-i="hours"></small></div><div><b data-cd="minutes">00</b><small data-i="minutes"></small></div><div><b data-cd="seconds">00</b><small data-i="seconds"></small></div></div>
+      <p class="small" data-i="countdown"></p>
+      <div class="btns"><button class="solid" data-action="calendar" type="button">＋ <span data-i="calendar"></span></button><button class="line" data-action="copy" type="button">⌖ <span data-i="copy"></span></button></div>
+    </div>
+  </section>
+
+  <!-- 3 events: hanging scrolls -->
+  <section class="panel p-events" data-name="nav_events">
+    <h2 class="h" data-i="events_h"></h2>
+    <div class="scrolls">
+      <article class="kake"><div class="rod"></div><div class="paper"><span class="vt" data-i="haldi_name"></span><div class="body"><small data-i="day1"></small><h3 data-i="haldi_name"></h3><p class="when" data-i="haldi_date"></p><p data-i="haldi_time"></p><hr><p class="venue" data-i="haldi_venue"></p><p class="addr" data-i="haldi_addr" data-html></p><p class="note" data-i="haldi_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Kothrud+Pune"><span data-i="directions"></span> ↗</a></div></div><div class="rod b"></div></article>
+      <article class="kake"><div class="rod"></div><div class="paper"><span class="vt" data-i="wed_name"></span><div class="body"><small data-i="day2"></small><h3 data-i="wed_name"></h3><p class="when" data-i="wed_date"></p><p data-i="wed_time"></p><hr><p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p><p class="note" data-i="wed_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a></div></div><div class="rod b"></div></article>
+      <article class="kake"><div class="rod"></div><div class="paper"><span class="vt" data-i="rec_name"></span><div class="body"><small data-i="evening"></small><h3 data-i="rec_name"></h3><p class="when" data-i="rec_date"></p><p data-i="rec_time"></p><hr><p class="venue" data-i="rec_venue"></p><p class="addr" data-i="rec_addr" data-html></p><p class="note" data-i="rec_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a></div></div><div class="rod b"></div></article>
+    </div>
+  </section>
+
+  <!-- 4 couple -->
+  <section class="panel p-couple" data-name="nav_couple">
+    <h2 class="h" data-i="couple_h"></h2>
+    <div class="duo">
+      <figure class="ensop" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><div class="ring"><img src="media/bride.jpg" alt="Shivani" /></div><figcaption><b>Shivani</b><small data-i="bride_role"></small><p data-i="bride_bio"></p></figcaption></figure>
+      <figure class="ensop" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><div class="ring"><img src="media/groom.jpg" alt="Akash" /></div><figcaption><b>Akash</b><small data-i="groom_role"></small><p data-i="groom_bio"></p></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 5 story -->
+  <section class="panel p-story" data-name="nav_story">
+    <div class="enso-video" data-hovervideo tabindex="0">
+      <video muted loop playsinline preload="auto" src="media/dummy.mp4"></video>
+      <div class="v-ov"><span>▶</span><small data-i="hover"></small></div>
+    </div>
+    <div class="col"><p class="small" data-i="nav_story"></p><h2 class="h left" data-i="story_h"></h2><p class="lead" data-i="story_p"></p></div>
+  </section>
+
+  <!-- 6 moments -->
+  <section class="panel p-moments" data-name="nav_gallery">
+    <h2 class="h" data-i="gallery_h"></h2>
+    <div class="hang">
+      <figure class="ph" style="--r:-2deg" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><img src="media/bride.jpg" alt="" loading="lazy" /><figcaption data-i="m1"></figcaption></figure>
+      <figure class="ph" style="--r:2deg"><div class="art g1">☕</div><figcaption data-i="m3"></figcaption></figure>
+      <figure class="ph" style="--r:-1deg"><div class="art g2">💍</div><figcaption data-i="m4"></figcaption></figure>
+      <figure class="ph" style="--r:3deg" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><img src="media/groom.jpg" alt="" loading="lazy" /><figcaption data-i="m2"></figcaption></figure>
+      <figure class="ph" style="--r:-3deg"><div class="art g3">✈️</div><figcaption data-i="m5"></figcaption></figure>
+      <figure class="ph" style="--r:1deg"><div class="art g4">💞</div><figcaption data-i="m6"></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 7 venue + close -->
+  <section class="panel p-venue" data-name="nav_venue">
+    <div class="vcol"><h2 class="h left" data-i="venue_h"></h2><p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p><ul><li>✈ <span data-i="airport"></span></li><li>🚆 <span data-i="train"></span></li><li>🚗 <span data-i="parking"></span></li></ul><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="openmap"></span> ↗</a></div>
+    <div class="pmap"><iframe title="Venue map" loading="lazy" src="https://maps.google.com/maps?q=Koregaon+Park+Pune&amp;output=embed"></iframe></div>
+    <footer class="end"><span class="hanko big">愛</span><p data-i="closing"></p><h2>Shivani <i>&amp;</i> Akash</h2><small data-i="footer"></small></footer>
+  </section>
+</main>
+<a class="back-hub" href="../index.html" data-i="back"></a>
+</body>
+</html>

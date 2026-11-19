@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#05061a" />
+<title>Shivani &amp; Akash — Starry Night</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Josefin+Sans:wght@300;400;600&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared/core.css?v=7" />
+<link rel="stylesheet" href="style.css?v=7" />
+<script defer src="shared/content.js?v=7"></script>
+<script defer src="shared/core.js?v=7"></script>
+<script defer src="app.js?v=7"></script>
+</head>
+<body class="locked">
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<!-- gate: click the star -->
+<div class="gate" data-gate>
+  <div class="gate-in">
+    <p class="g-small" data-i="invited"></p>
+    <h1 class="g-names">Shivani <i>&amp;</i> Akash</h1>
+    <p class="g-small" data-i="date"></p>
+    <button class="bigstar" data-open type="button" aria-label="Open invitation"><span>✦</span></button>
+    <p class="g-small pulse" data-i="open"></p>
+  </div>
+</div>
+
+<header class="top"><span class="mono">S ✦ A</span><button class="lang" data-lang-toggle type="button"><span data-lang-label></span></button></header>
+<nav class="cnav" aria-label="Sections">
+  <a href="#home" data-i-label="nav_home"><i></i><span data-i="nav_home"></span></a>
+  <a href="#events" data-i-label="nav_events"><i></i><span data-i="nav_events"></span></a>
+  <a href="#couple" data-i-label="nav_couple"><i></i><span data-i="nav_couple"></span></a>
+  <a href="#story" data-i-label="nav_story"><i></i><span data-i="nav_story"></span></a>
+  <a href="#venue" data-i-label="nav_venue"><i></i><span data-i="nav_venue"></span></a>
+</nav>
+
+<main>
+  <section class="hero" id="home">
+    <div class="moon" aria-hidden="true"><i class="cr c1"></i><i class="cr c2"></i><i class="cr c3"></i></div>
+    <div class="hero-in">
+      <p class="small rv" data-i="kicker"></p>
+      <h2 class="names rv">Shivani<br><span>&amp;</span><br>Akash</h2>
+      <p class="rv date" data-i="date"></p>
+      <p class="tag rv" data-i="tagline"></p>
+    </div>
+    <span class="scrollcue" aria-hidden="true">⌄</span>
+  </section>
+
+  <section class="orbs-sec">
+    <p class="small rv" data-i="countdown"></p>
+    <p class="lead rv" data-i="intro"></p>
+    <div class="orbs rv">
+      <div class="orb"><b data-cd="days">000</b><small data-i="days"></small></div>
+      <div class="orb"><b data-cd="hours">00</b><small data-i="hours"></small></div>
+      <div class="orb"><b data-cd="minutes">00</b><small data-i="minutes"></small></div>
+      <div class="orb"><b data-cd="seconds">00</b><small data-i="seconds"></small></div>
+    </div>
+    <div class="btns rv"><button class="ghost" data-action="calendar" type="button">＋ <span data-i="calendar"></span></button><button class="ghost" data-action="copy" type="button">⌖ <span data-i="copy"></span></button></div>
+  </section>
+
+  <!-- constellation of events -->
+  <section class="const" id="events">
+    <h2 class="h rv" data-i="events_h"></h2>
+    <div class="sky-map rv">
+      <svg viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true"><polyline points="17,36 50,12 83,32" /></svg>
+      <button class="snode on" style="left:17%;top:72%" data-ev="0" type="button"><i>✦</i><span data-i="haldi_name"></span></button>
+      <button class="snode" style="left:50%;top:24%" data-ev="1" type="button"><i>✦</i><span data-i="wed_name"></span></button>
+      <button class="snode" style="left:83%;top:64%" data-ev="2" type="button"><i>✦</i><span data-i="rec_name"></span></button>
+    </div>
+    <div class="panels">
+      <article class="panel on"><small data-i="day1"></small><h3 data-i="haldi_name"></h3><p class="when" data-i="haldi_date"></p><p data-i="haldi_time"></p><hr><p class="venue" data-i="haldi_venue"></p><p class="addr" data-i="haldi_addr" data-html></p><p class="note" data-i="haldi_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Kothrud+Pune"><span data-i="directions"></span> ↗</a></article>
+      <article class="panel"><small data-i="day2"></small><h3 data-i="wed_name"></h3><p class="when" data-i="wed_date"></p><p data-i="wed_time"></p><hr><p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p><p class="note" data-i="wed_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a></article>
+      <article class="panel"><small data-i="evening"></small><h3 data-i="rec_name"></h3><p class="when" data-i="rec_date"></p><p data-i="rec_time"></p><hr><p class="venue" data-i="rec_venue"></p><p class="addr" data-i="rec_addr" data-html></p><p class="note" data-i="rec_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a></article>
+    </div>
+  </section>
+
+  <!-- two stars drift together while scrolling -->
+  <section class="together" id="couple">
+    <div class="stick">
+      <h2 class="h" data-i="couple_h"></h2>
+      <div class="pair">
+        <figure class="star-photo s-l" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><img src="media/bride.jpg" alt="Shivani" /><figcaption><b>Shivani</b><span data-i="bride_role"></span></figcaption></figure>
+        <span class="merge" aria-hidden="true">❤</span>
+        <figure class="star-photo s-r" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><img src="media/groom.jpg" alt="Akash" /><figcaption><b>Akash</b><span data-i="groom_role"></span></figcaption></figure>
+      </div>
+      <p class="lead bios"><span data-i="bride_bio"></span></p>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="porthole" data-hovervideo tabindex="0">
+      <video muted loop playsinline preload="auto" src="media/dummy.mp4"></video>
+      <span class="ring"></span>
+      <div class="p-ov"><span class="pl">▶</span><small data-i="hover"></small></div>
+    </div>
+    <div class="story-copy rv"><p class="small" data-i="nav_story"></p><h2 class="h left" data-i="story_h"></h2><p class="lead" data-i="story_p"></p></div>
+  </section>
+
+  <section class="planets">
+    <h2 class="h rv" data-i="gallery_h"></h2>
+    <div class="pl-row">
+      <figure class="planet big" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><img src="media/bride.jpg" alt="" loading="lazy" /><figcaption data-i="m1"></figcaption></figure>
+      <figure class="planet a"><span>☕</span><figcaption data-i="m3"></figcaption></figure>
+      <figure class="planet b"><span>💍</span><figcaption data-i="m4"></figcaption></figure>
+      <figure class="planet big" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><img src="media/groom.jpg" alt="" loading="lazy" /><figcaption data-i="m2"></figcaption></figure>
+      <figure class="planet c"><span>✈️</span><figcaption data-i="m5"></figcaption></figure>
+      <figure class="planet d"><span>💞</span><figcaption data-i="m6"></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="coords" id="venue">
+    <p class="small rv">18°31′N · 73°51′E</p>
+    <h2 class="h rv" data-i="venue_h"></h2>
+    <div class="coord-grid">
+      <div class="window rv"><iframe title="Venue map" loading="lazy" src="https://maps.google.com/maps?q=Koregaon+Park+Pune&amp;output=embed"></iframe></div>
+      <div class="coord-info rv"><p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p>
+        <ul><li>✈ <span data-i="airport"></span></li><li>🚆 <span data-i="train"></span></li><li>🚗 <span data-i="parking"></span></li></ul>
+        <a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="openmap"></span> ↗</a></div>
+    </div>
+    <footer class="end rv"><span>☾</span><p data-i="closing"></p><h2>Shivani <i>&amp;</i> Akash</h2><small data-i="footer"></small></footer>
+  </section>
+</main>
+<a class="back-hub" href="../index.html" data-i="back"></a>
+</body>
+</html>

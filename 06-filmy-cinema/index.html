@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#14080b" />
+<title>Shivani &amp; Akash — Filmy Cinema</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared/core.css?v=7" />
+<link rel="stylesheet" href="style.css?v=7" />
+<script defer src="shared/content.js?v=7"></script>
+<script defer src="shared/core.js?v=7"></script>
+<script defer src="app.js?v=7"></script>
+</head>
+<body class="locked">
+
+<!-- gate: golden ticket that tears in two -->
+<div class="gate" data-gate>
+  <div class="flash"></div>
+  <div class="ticket">
+    <div class="t-main">
+      <small>ADMIT TWO · FIRST SHOW · ROW A</small>
+      <p class="t-s" data-i="invited"></p>
+      <h1>Shivani <i>&amp;</i> Akash</h1>
+      <p class="t-s" data-i="date"></p>
+      <button class="tear" data-open type="button"><span data-i="open"></span> ✂</button>
+    </div>
+    <div class="t-stub"><span>SEAT<br><b>A1·A2</b></span><i class="bars"></i></div>
+  </div>
+</div>
+
+<header class="top"><span class="logo">★ S&amp;A PICTURES</span><nav class="tn"><a href="#home" data-i="nav_home"></a><a href="#now" data-i="nav_events"></a><a href="#cast" data-i="nav_couple"></a><a href="#reel" data-i="nav_gallery"></a><a href="#venue" data-i="nav_venue"></a></nav><button class="lang" data-lang-toggle type="button"><span data-lang-label></span></button></header>
+
+<main>
+  <!-- trailer hero -->
+  <section class="hero" id="home">
+    <video class="bgv" autoplay muted loop playsinline preload="auto" src="media/dummy.mp4"></video>
+    <div class="shade"></div><div class="bar bt"></div><div class="bar bb"></div>
+    <div class="beam b1"></div><div class="beam b2"></div>
+    <div class="title">
+      <p class="pre" data-i="blessings"></p>
+      <h2><span>SHIVANI</span><em>WEDS</em><span>AKASH</span></h2>
+      <p class="tagline" data-i="tagline"></p>
+      <div class="meta"><b class="rate">U/A</b><span>IN THEATRES · 12 · 12 · 2026</span><span data-i="city"></span></div>
+    </div>
+    <span class="cue" aria-hidden="true">⌄</span>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="tk"><span>NOW SHOWING ★ SHIVANI WEDS AKASH ★ A ONCE-IN-A-LIFETIME LOVE STORY ★ 12 · 12 · 2026 ★ PUNE ★ </span><span>NOW SHOWING ★ SHIVANI WEDS AKASH ★ A ONCE-IN-A-LIFETIME LOVE STORY ★ 12 · 12 · 2026 ★ PUNE ★ </span></div></div>
+
+  <!-- clapperboard countdown -->
+  <section class="clap-sec">
+    <div class="clapper rv">
+      <div class="clap-top"><div class="stick-t"></div><div class="stick-b"></div></div>
+      <div class="board">
+        <div class="row"><span>PROD.</span><b>S &amp; A PICTURES</b><span>SCENE</span><b>12</b></div>
+        <div class="row"><span>DIR.</span><b>LOVE</b><span>TAKE</span><b>12</b></div>
+        <div class="cd"><div><b data-cd="days">000</b><small data-i="days"></small></div><i>:</i><div><b data-cd="hours">00</b><small data-i="hours"></small></div><i>:</i><div><b data-cd="minutes">00</b><small data-i="minutes"></small></div><i>:</i><div><b data-cd="seconds">00</b><small data-i="seconds"></small></div></div>
+        <p class="board-t" data-i="countdown"></p>
+      </div>
+    </div>
+    <p class="lead rv" data-i="intro"></p>
+    <div class="btns rv"><button class="gold" data-action="calendar" type="button">＋ <span data-i="calendar"></span></button><button class="out" data-action="copy" type="button">⌖ <span data-i="copy"></span></button></div>
+  </section>
+
+  <!-- now showing tickets -->
+  <section class="now" id="now">
+    <h2 class="h rv"><span data-i="events_h"></span></h2>
+    <div class="tickets">
+      <article class="tk-card rv">
+        <div class="tk-l"><small data-i="day1"></small><h3 data-i="haldi_name"></h3><p class="when" data-i="haldi_date"></p><p data-i="haldi_time"></p><hr><p class="venue" data-i="haldi_venue"></p><p class="addr" data-i="haldi_addr" data-html></p><p class="note" data-i="haldi_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Kothrud+Pune"><span data-i="directions"></span> ↗</a></div>
+        <div class="tk-r"><span>SHOW</span><strong>01</strong><i class="bars"></i><em>11·12</em></div>
+      </article>
+      <article class="tk-card rv">
+        <div class="tk-l"><small data-i="day2"></small><h3 data-i="wed_name"></h3><p class="when" data-i="wed_date"></p><p data-i="wed_time"></p><hr><p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p><p class="note" data-i="wed_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a></div>
+        <div class="tk-r"><span>SHOW</span><strong>02</strong><i class="bars"></i><em>12·12</em></div>
+      </article>
+      <article class="tk-card rv">
+        <div class="tk-l"><small data-i="evening"></small><h3 data-i="rec_name"></h3><p class="when" data-i="rec_date"></p><p data-i="rec_time"></p><hr><p class="venue" data-i="rec_venue"></p><p class="addr" data-i="rec_addr" data-html></p><p class="note" data-i="rec_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a></div>
+        <div class="tk-r"><span>SHOW</span><strong>03</strong><i class="bars"></i><em>12·12</em></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- starring + trailer -->
+  <section class="cast" id="cast">
+    <h2 class="h rv" data-i="couple_h"></h2>
+    <div class="posters">
+      <figure class="poster rv" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><img src="media/bride.jpg" alt="Shivani" loading="lazy" /><figcaption><small>STARRING</small><b>SHIVANI</b><span data-i="bride_role"></span></figcaption></figure>
+      <div class="trailer rv" data-hovervideo tabindex="0">
+        <video muted loop playsinline preload="auto" src="media/dummy.mp4"></video>
+        <div class="t-ov"><span class="pl">▶</span><b>OFFICIAL TRAILER</b><small data-i="hover"></small></div>
+        <i class="rec"></i><span class="tc" id="tc">00:00:00:00</span>
+      </div>
+      <figure class="poster rv" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><img src="media/groom.jpg" alt="Akash" loading="lazy" /><figcaption><small>STARRING</small><b>AKASH</b><span data-i="groom_role"></span></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- film reel -->
+  <section class="reel" id="reel">
+    <h2 class="h rv" data-i="gallery_h"></h2>
+    <div class="strip"><div class="frames">
+      <figure class="fr" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><img src="media/bride.jpg" alt="" loading="lazy" /><figcaption data-i="m1"></figcaption></figure>
+      <figure class="fr f1"><span>☕</span><figcaption data-i="m3"></figcaption></figure>
+      <figure class="fr f2"><span>💍</span><figcaption data-i="m4"></figcaption></figure>
+      <figure class="fr" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><img src="media/groom.jpg" alt="" loading="lazy" /><figcaption data-i="m2"></figcaption></figure>
+      <figure class="fr f3"><span>✈️</span><figcaption data-i="m5"></figcaption></figure>
+      <figure class="fr f4"><span>💞</span><figcaption data-i="m6"></figcaption></figure>
+      <figure class="fr dup" aria-hidden="true"><img src="media/bride.jpg" alt="" loading="lazy" /></figure>
+      <figure class="fr f1 dup" aria-hidden="true"><span>☕</span></figure>
+      <figure class="fr f2 dup" aria-hidden="true"><span>💍</span></figure>
+      <figure class="fr dup" aria-hidden="true"><img src="media/groom.jpg" alt="" loading="lazy" /></figure>
+      <figure class="fr f3 dup" aria-hidden="true"><span>✈️</span></figure>
+      <figure class="fr f4 dup" aria-hidden="true"><span>💞</span></figure>
+    </div></div>
+  </section>
+
+  <!-- viewfinder location -->
+  <section class="loc" id="venue">
+    <h2 class="h rv" data-i="venue_h"></h2>
+    <div class="loc-grid">
+      <div class="vf rv"><iframe title="Venue map" loading="lazy" src="https://maps.google.com/maps?q=Koregaon+Park+Pune&amp;output=embed"></iframe><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i><span class="vrec"><u></u> REC</span><span class="vtc">18°31′N 73°51′E</span></div>
+      <div class="loc-txt rv"><p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p><ul><li>✈ <span data-i="airport"></span></li><li>🚆 <span data-i="train"></span></li><li>🚗 <span data-i="parking"></span></li></ul><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="openmap"></span> ↗</a></div>
+    </div>
+  </section>
+
+  <!-- end credits -->
+  <section class="credits">
+    <p class="small" data-i="closing"></p>
+    <div class="roll"><div class="roll-in">
+      <p>DIRECTED BY</p><b>LOVE</b><p>STARRING</p><b>SHIVANI</b><b>AKASH</b><p>PRODUCED BY</p><b>BOTH OUR FAMILIES</b><p>MUSIC BY</p><b>EVERYONE DANCING</b><p>CATERING</p><b>TOO MUCH FOOD</b><p>NO HEARTS WERE HARMED</p><b>★ ★ ★ ★ ★</b><h2>SHIVANI <i>&amp;</i> AKASH</h2><small data-i="footer"></small>
+    </div></div>
+  </section>
+</main>
+<a class="back-hub" href="../index.html" data-i="back"></a>
+</body>
+</html>

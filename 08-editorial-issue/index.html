@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f3efe8" />
+<title>Shivani &amp; Akash — The Wedding Issue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Work+Sans:wght@300;400;500;600&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared/core.css?v=8" />
+<link rel="stylesheet" href="style.css?v=8" />
+<script defer src="shared/content.js?v=8"></script>
+<script defer src="shared/core.js?v=8"></script>
+<script defer src="app.js?v=8"></script>
+</head>
+<body class="locked">
+
+<!-- gate: a magazine cover that opens like a book -->
+<div class="gate" data-gate>
+  <div class="book">
+    <div class="inside"><span data-i="kicker"></span><b>Shivani &amp; Akash</b></div>
+    <div class="cover">
+      <div class="mast">THE WEDDING <em>ISSUE</em></div>
+      <img src="media/bride.jpg" alt="" />
+      <div class="cl">
+        <small data-i="invited"></small>
+        <h1>Shivani<br>&amp; Akash</h1>
+        <small>VOL. 12 · DECEMBER 2026</small>
+      </div>
+      <button class="g-btn" data-open type="button"><span data-i="open"></span> →</button>
+    </div>
+  </div>
+</div>
+
+<header class="top"><span class="logo">THE WEDDING <em>ISSUE</em></span><nav><a href="#cover" data-i="nav_home"></a><a href="#features" data-i="nav_events"></a><a href="#interview" data-i="nav_couple"></a><a href="#essay" data-i="nav_gallery"></a><a href="#where" data-i="nav_venue"></a></nav><button class="lang" data-lang-toggle type="button"><span data-lang-label></span></button></header>
+<aside class="spine" aria-hidden="true">VOL. 12 · DECEMBER 2026 · PUNE</aside>
+
+<main>
+  <!-- cover story -->
+  <section class="cover-story" id="cover">
+    <div class="cs-photo"><img src="media/bride.jpg" alt="Shivani" /><img class="b" src="media/groom.jpg" alt="Akash" /></div>
+    <h1 class="mega"><span>Shivani</span><span class="amp">&amp;</span><span>Akash</span></h1>
+    <div class="cs-lines">
+      <p class="issue">THE WEDDING ISSUE</p>
+      <ul><li><b>p.04</b> <span data-i="haldi_name"></span></li><li><b>p.06</b> <span data-i="wed_name"></span></li><li><b>p.08</b> <span data-i="rec_name"></span></li><li><b>p.10</b> <span data-i="nav_couple"></span></li><li><b>p.14</b> <span data-i="nav_venue"></span></li></ul>
+      <p class="deck rv" data-i="tagline"></p>
+    </div>
+    <div class="band"><div><b data-cd="days">000</b><small data-i="days"></small></div><div><b data-cd="hours">00</b><small data-i="hours"></small></div><div><b data-cd="minutes">00</b><small data-i="minutes"></small></div><div><b data-cd="seconds">00</b><small data-i="seconds"></small></div><p data-i="countdown"></p></div>
+  </section>
+
+  <!-- editor's letter -->
+  <section class="letter">
+    <p class="kick" data-i="blessings"></p>
+    <p class="dropcap rv" data-i="intro"></p>
+    <div class="btns rv"><button class="red" data-action="calendar" type="button">＋ <span data-i="calendar"></span></button><button class="ink" data-action="copy" type="button">⌖ <span data-i="copy"></span></button></div>
+  </section>
+
+  <!-- features -->
+  <section class="features" id="features">
+    <h2 class="sec-h rv"><small>FEATURE</small><span data-i="events_h"></span></h2>
+
+    <article class="spread rv">
+      <div class="num">01</div>
+      <div class="s-body">
+        <p class="kick" data-i="day1"></p><h3 data-i="haldi_name"></h3>
+        <blockquote data-i="haldi_note"></blockquote>
+        <div class="cols"><p class="when" data-i="haldi_date"></p><p data-i="haldi_time"></p><p class="venue" data-i="haldi_venue"></p><p class="addr" data-i="haldi_addr" data-html></p></div>
+        <a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Kothrud+Pune"><span data-i="directions"></span> ↗</a>
+      </div>
+    </article>
+    <article class="spread flip rv">
+      <div class="num">02</div>
+      <div class="s-body">
+        <p class="kick" data-i="day2"></p><h3 data-i="wed_name"></h3>
+        <blockquote data-i="wed_note"></blockquote>
+        <div class="cols"><p class="when" data-i="wed_date"></p><p data-i="wed_time"></p><p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p></div>
+        <a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a>
+      </div>
+    </article>
+    <article class="spread rv">
+      <div class="num">03</div>
+      <div class="s-body">
+        <p class="kick" data-i="evening"></p><h3 data-i="rec_name"></h3>
+        <blockquote data-i="rec_note"></blockquote>
+        <div class="cols"><p class="when" data-i="rec_date"></p><p data-i="rec_time"></p><p class="venue" data-i="rec_venue"></p><p class="addr" data-i="rec_addr" data-html></p></div>
+        <a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- film inset -->
+  <section class="film">
+    <div class="film-v rv" data-hovervideo tabindex="0">
+      <video muted loop playsinline preload="auto" src="media/dummy.mp4"></video>
+      <div class="f-ov"><span>▶</span><small data-i="hover"></small></div>
+      <em>THE FILM</em>
+    </div>
+    <div class="film-t rv"><p class="kick" data-i="nav_story"></p><h2 data-i="story_h"></h2><p data-i="story_p"></p></div>
+  </section>
+
+  <!-- interview -->
+  <section class="interview" id="interview">
+    <h2 class="sec-h rv"><small>IN CONVERSATION</small><span data-i="couple_h"></span></h2>
+    <article class="qa rv" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><img src="media/bride.jpg" alt="Shivani" loading="lazy" /><div><p class="kick" data-i="bride_role"></p><h3>Shivani</h3><p class="q">Q. Describe Akash in three words.</p><p class="a" data-i="groom_bio"></p></div></article>
+    <article class="qa rev rv" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><img src="media/groom.jpg" alt="Akash" loading="lazy" /><div><p class="kick" data-i="groom_role"></p><h3>Akash</h3><p class="q">Q. And Shivani?</p><p class="a" data-i="bride_bio"></p></div></article>
+  </section>
+
+  <!-- photo essay -->
+  <section class="essay" id="essay">
+    <h2 class="sec-h rv"><small>PHOTO ESSAY</small><span data-i="gallery_h"></span></h2>
+    <div class="eg">
+      <figure class="e1" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><img src="media/bride.jpg" alt="" loading="lazy" /><figcaption data-i="m1"></figcaption></figure>
+      <figure class="e2 t1"><span>☕</span><figcaption data-i="m3"></figcaption></figure>
+      <figure class="e3 t2"><span>💍</span><figcaption data-i="m4"></figcaption></figure>
+      <figure class="e4" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><img src="media/groom.jpg" alt="" loading="lazy" /><figcaption data-i="m2"></figcaption></figure>
+      <figure class="e5 t3"><span>✈️</span><figcaption data-i="m5"></figcaption></figure>
+      <figure class="e6 t4"><span>💞</span><figcaption data-i="m6"></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- where to be -->
+  <section class="where" id="where">
+    <h2 class="sec-h rv"><small>WHERE TO BE</small><span data-i="venue_h"></span></h2>
+    <div class="w-grid rv">
+      <div class="w-map"><iframe title="Venue map" loading="lazy" src="https://maps.google.com/maps?q=Koregaon+Park+Pune&amp;output=embed"></iframe></div>
+      <div class="w-txt"><p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p><ul><li>✈ <span data-i="airport"></span></li><li>🚆 <span data-i="train"></span></li><li>🚗 <span data-i="parking"></span></li></ul><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="openmap"></span> ↗</a></div>
+    </div>
+  </section>
+
+  <footer class="backcover"><p class="rv" data-i="closing"></p><h2 class="rv">Shivani <i>&amp;</i> Akash</h2><span class="rv">12 · 12 · 2026 · PUNE</span><small data-i="footer"></small></footer>
+</main>
+<a class="back-hub" href="../index.html" data-i="back"></a>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#b5573a" />
+<title>Shivani &amp; Akash — Boho Terracotta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:wght@300;400;600&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared/core.css?v=7" />
+<link rel="stylesheet" href="style.css?v=7" />
+<script defer src="shared/content.js?v=7"></script>
+<script defer src="shared/core.js?v=7"></script>
+<script defer src="app.js?v=7"></script>
+</head>
+<body class="locked">
+
+<!-- gate: rainbow sunrise arch -->
+<div class="gate" data-gate>
+  <div class="rings"><i></i><i></i><i></i><i></i></div>
+  <div class="gate-in">
+    <p class="g-s" data-i="invited"></p>
+    <h1 class="g-n">Shivani<br><em>&amp;</em> Akash</h1>
+    <p class="g-s" data-i="date"></p>
+    <button class="g-btn" data-open type="button"><span data-i="open"></span> →</button>
+  </div>
+  <span class="sunball"></span>
+</div>
+
+<div class="layout">
+  <!-- sidebar (top bar on mobile) -->
+  <aside class="side">
+    <div class="side-top">
+      <div class="mini-arch"><i></i><i></i><i></i><b>S&amp;A</b></div>
+      <h2 class="side-name">Shivani <em>&amp;</em> Akash</h2>
+      <p class="side-date" data-i="date"></p>
+    </div>
+    <nav class="menu" aria-label="Sections">
+      <a href="#home" class="act" data-i="nav_home"></a><a href="#events" data-i="nav_events"></a><a href="#couple" data-i="nav_couple"></a><a href="#story" data-i="nav_story"></a><a href="#moments" data-i="nav_gallery"></a><a href="#venue" data-i="nav_venue"></a>
+    </nav>
+    <div class="side-cd" aria-label="Countdown">
+      <div><b data-cd="days">000</b><small data-i="days"></small></div><div><b data-cd="hours">00</b><small data-i="hours"></small></div><div><b data-cd="minutes">00</b><small data-i="minutes"></small></div>
+    </div>
+    <button class="lang" data-lang-toggle type="button"><span data-lang-label></span></button>
+  </aside>
+
+  <main class="content">
+    <!-- hero arches -->
+    <section class="sec hero" id="home">
+      <p class="kick rv" data-i="blessings"></p>
+      <h1 class="big rv" data-i="tagline"></h1>
+      <div class="arches">
+        <figure class="arch a-l rv" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><img src="media/bride.jpg" alt="Shivani" /><figcaption>Shivani</figcaption></figure>
+        <div class="arch a-m rv"><span class="sun">☼</span><b data-i="kicker"></b><strong>12</strong><em>DEC · 2026</em><small data-i="city"></small></div>
+        <figure class="arch a-r rv" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><img src="media/groom.jpg" alt="Akash" /><figcaption>Akash</figcaption></figure>
+      </div>
+      <p class="lead rv" data-i="intro"></p>
+      <div class="btns rv"><button class="solid" data-action="calendar" type="button">＋ <span data-i="calendar"></span></button><button class="line" data-action="copy" type="button">⌖ <span data-i="copy"></span></button></div>
+    </section>
+
+    <!-- events as tabs -->
+    <section class="sec events" id="events">
+      <p class="kick rv" data-i="savedate"></p>
+      <h2 class="h rv" data-i="events_h"></h2>
+      <div class="tabs rv" role="tablist">
+        <button class="tab on" role="tab" data-tab="0" type="button"><span>11</span><i data-i="haldi_name"></i></button>
+        <button class="tab" role="tab" data-tab="1" type="button"><span>12</span><i data-i="wed_name"></i></button>
+        <button class="tab" role="tab" data-tab="2" type="button"><span>12</span><i data-i="rec_name"></i></button>
+      </div>
+      <div class="tabpanes rv">
+        <article class="pane on"><div class="pane-art t1"><span>🌼</span><i></i><i></i><i></i></div><div class="pane-txt"><small data-i="day1"></small><h3 data-i="haldi_name"></h3><p class="when" data-i="haldi_date"></p><p data-i="haldi_time"></p><hr><p class="venue" data-i="haldi_venue"></p><p class="addr" data-i="haldi_addr" data-html></p><p class="note" data-i="haldi_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Kothrud+Pune"><span data-i="directions"></span> ↗</a></div></article>
+        <article class="pane"><div class="pane-art t2"><span>💍</span><i></i><i></i><i></i></div><div class="pane-txt"><small data-i="day2"></small><h3 data-i="wed_name"></h3><p class="when" data-i="wed_date"></p><p data-i="wed_time"></p><hr><p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p><p class="note" data-i="wed_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a></div></article>
+        <article class="pane"><div class="pane-art t3"><span>🥂</span><i></i><i></i><i></i></div><div class="pane-txt"><small data-i="evening"></small><h3 data-i="rec_name"></h3><p class="when" data-i="rec_date"></p><p data-i="rec_time"></p><hr><p class="venue" data-i="rec_venue"></p><p class="addr" data-i="rec_addr" data-html></p><p class="note" data-i="rec_note"></p><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="directions"></span> ↗</a></div></article>
+      </div>
+    </section>
+
+    <!-- couple -->
+    <section class="sec couple" id="couple">
+      <h2 class="h rv" data-i="couple_h"></h2>
+      <div class="duo">
+        <article class="person rv" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><div class="p-arch"><img src="media/bride.jpg" alt="" loading="lazy" /></div><div><small data-i="bride_role"></small><h3>Shivani</h3><p data-i="bride_bio"></p></div></article>
+        <article class="person rv" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><div class="p-arch"><img src="media/groom.jpg" alt="" loading="lazy" /></div><div><small data-i="groom_role"></small><h3>Akash</h3><p data-i="groom_bio"></p></div></article>
+      </div>
+    </section>
+
+    <!-- sunrise video -->
+    <section class="sec story" id="story">
+      <div class="sunrise rv" data-hovervideo tabindex="0">
+        <video muted loop playsinline preload="auto" src="media/dummy.mp4"></video>
+        <div class="s-ov"><span class="pl">▶</span><small data-i="hover"></small></div>
+      </div>
+      <h2 class="h rv" data-i="story_h"></h2><p class="lead rv" data-i="story_p"></p>
+    </section>
+
+    <!-- masonry -->
+    <section class="sec moments" id="moments">
+      <h2 class="h rv" data-i="gallery_h"></h2>
+      <div class="masonry">
+        <figure class="mz tall" data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><img src="media/bride.jpg" alt="" loading="lazy" /><figcaption data-i="m1"></figcaption></figure>
+        <figure class="mz sq g1"><span>☕</span><figcaption data-i="m3"></figcaption></figure>
+        <figure class="mz sq g2"><span>💍</span><figcaption data-i="m4"></figcaption></figure>
+        <figure class="mz tall" data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><img src="media/groom.jpg" alt="" loading="lazy" /><figcaption data-i="m2"></figcaption></figure>
+        <figure class="mz sq g3"><span>✈️</span><figcaption data-i="m5"></figcaption></figure>
+        <figure class="mz sq g4"><span>💞</span><figcaption data-i="m6"></figcaption></figure>
+      </div>
+    </section>
+
+    <!-- venue -->
+    <section class="sec venue" id="venue">
+      <h2 class="h rv" data-i="venue_h"></h2>
+      <div class="v-grid rv">
+        <div class="v-map"><iframe title="Venue map" loading="lazy" src="https://maps.google.com/maps?q=Koregaon+Park+Pune&amp;output=embed"></iframe></div>
+        <div class="v-txt"><p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p><ul><li>✈ <span data-i="airport"></span></li><li>🚆 <span data-i="train"></span></li><li>🚗 <span data-i="parking"></span></li></ul><a class="link" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="openmap"></span> ↗</a></div>
+      </div>
+      <footer class="end"><span class="sun">☼</span><p data-i="closing"></p><h2>Shivani <em>&amp;</em> Akash</h2><small data-i="footer"></small></footer>
+    </section>
+  </main>
+</div>
+<a class="back-hub" href="../index.html" data-i="back"></a>
+</body>
+</html>

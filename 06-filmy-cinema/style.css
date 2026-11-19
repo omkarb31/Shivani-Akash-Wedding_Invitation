@@ -1,0 +1,106 @@
+/* FILMY CINEMA — ticket gate, trailer hero, clapperboard, ticket-stub events, posters, film reel, credits */
+:root { --bg: #14080b; --bg2: #1c0d11; --ink: #fff0e0; --muted: #cdaea0; --pink: #ff4d79; --gold: #ffc83d; --c-accent: #ffc83d; --c-on: #14080b; --lb-bg: #1c0d11; --lb-ink: #fff0e0; --lb-accent: #ffc83d; --lb-font: "Bebas Neue", sans-serif; --lb-line: rgba(255,200,61,.5); }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.7 "Poppins", sans-serif; overflow-x: hidden; }
+.small { font: 600 11px "Poppins"; letter-spacing: .3em; color: var(--gold); margin: 0 0 12px; text-align: center; }
+.h { font: 400 clamp(44px, 7vw, 92px)/1 "Bebas Neue", sans-serif; letter-spacing: .04em; text-align: center; margin: 0 0 40px; background: linear-gradient(100deg, var(--gold), var(--pink)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lead { max-width: 520px; margin: 24px auto; text-align: center; color: var(--muted); }
+.link { color: var(--gold); text-decoration: none; font: 600 11px "Poppins"; letter-spacing: .18em; border-bottom: 1px solid var(--gold); display: inline-block; margin-top: 12px; padding-bottom: 3px; }
+.btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.gold, .out { padding: 14px 24px; font: 600 11px "Poppins"; letter-spacing: .16em; cursor: pointer; transition: .3s; border: 2px solid var(--gold); } .gold { background: var(--gold); color: var(--bg); } .out { background: transparent; color: var(--gold); } .gold:hover, .out:hover { transform: translateY(-3px) rotate(-1deg); box-shadow: 0 12px 30px rgba(255,200,61,.35); }
+
+/* ticket gate */
+.gate { background: radial-gradient(circle, #3a1a22, #0d0507); }
+.flash { position: absolute; inset: 0; background: #fff; opacity: 0; pointer-events: none; z-index: 5; }
+.gate.open .flash { animation: flash 1.2s ease-out; } @keyframes flash { 0% { opacity: 0; } 12% { opacity: .95; } 100% { opacity: 0; } }
+.gate { transition: opacity .6s 1.3s; } .gate.open { opacity: 0; pointer-events: none; }
+.ticket { position: relative; display: flex; width: min(94vw, 760px); filter: drop-shadow(0 30px 50px rgba(0,0,0,.6)); animation: tfloat 4s ease-in-out infinite; } @keyframes tfloat { 50% { transform: translateY(-10px) rotate(-.6deg); } }
+.t-main, .t-stub { position: relative; background: linear-gradient(135deg, #ffd95c, #f0a500); color: #3a0b16; }
+.t-main { flex: 1; padding: 34px 30px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; border-radius: 14px 0 0 14px; -webkit-mask: radial-gradient(circle at 0 50%, transparent 14px, #000 15px), none; mask: radial-gradient(circle at 0 50%, transparent 14px, #000 15px); transition: transform 1.4s cubic-bezier(.6,0,.3,1) .2s, opacity 1s .5s; }
+.t-stub { width: 130px; padding: 20px; border-radius: 0 14px 14px 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; -webkit-mask: radial-gradient(circle at 100% 50%, transparent 14px, #000 15px); mask: radial-gradient(circle at 100% 50%, transparent 14px, #000 15px); border-left: 3px dashed rgba(58,11,22,.5); transition: transform 1.4s cubic-bezier(.6,0,.3,1) .2s, opacity 1s .5s; font: 600 11px "Poppins"; letter-spacing: .2em; } .t-stub b { font: 400 30px "Bebas Neue"; letter-spacing: .08em; }
+.bars { display: block; width: 80px; height: 40px; background: repeating-linear-gradient(90deg, #3a0b16 0 2px, transparent 2px 5px, #3a0b16 5px 6px, transparent 6px 10px, #3a0b16 10px 13px, transparent 13px 15px); }
+.t-main small { font: 600 10px "Poppins"; letter-spacing: .26em; padding: 6px 12px; border: 2px dashed rgba(58,11,22,.55); } .t-s { margin: 0; font: 600 10px "Poppins"; letter-spacing: .3em; }
+.t-main h1 { margin: 0; font: 400 clamp(54px, 11vw, 112px)/.92 "Bebas Neue"; letter-spacing: .04em; } .t-main h1 i { font-style: normal; color: #b3173f; }
+.tear { margin-top: 8px; padding: 14px 26px; background: #3a0b16; color: #ffd95c; border: 0; font: 700 11px "Poppins"; letter-spacing: .22em; cursor: pointer; animation: gl 2.2s infinite; transition: transform .3s; } .tear:hover { transform: scale(1.06) rotate(-2deg); } @keyframes gl { 0% { box-shadow: 0 0 0 0 rgba(58,11,22,.5); } 100% { box-shadow: 0 0 0 16px rgba(58,11,22,0); } }
+.gate.open .t-main { transform: translateX(-130vw) rotate(-10deg); opacity: 0; } .gate.open .t-stub { transform: translateX(130vw) rotate(14deg); opacity: 0; }
+
+.top { position: fixed; top: 0; left: 0; right: 0; z-index: 60; height: 62px; padding: 0 22px; display: flex; align-items: center; gap: 22px; background: linear-gradient(180deg, rgba(20,8,11,.95), transparent); }
+.logo { font: 400 26px "Bebas Neue"; letter-spacing: .1em; color: var(--gold); } .tn { margin-left: auto; display: flex; gap: 6px; } .tn a { color: var(--ink); text-decoration: none; font: 600 10px "Poppins"; letter-spacing: .18em; padding: 8px 10px; text-transform: uppercase; transition: .25s; } .tn a:hover { color: var(--gold); }
+.lang { background: var(--pink); color: #fff; border: 0; padding: 8px 14px; font: 600 11px "Poppins"; cursor: pointer; transform: skewX(-8deg); }
+
+/* hero */
+.hero { position: relative; height: 100vh; min-height: 560px; overflow: hidden; display: grid; place-items: center; text-align: center; }
+.bgv { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: sepia(.4) saturate(1.3) brightness(.55); transform: scale(1.1); animation: kb 20s ease-in-out infinite alternate; } @keyframes kb { to { transform: scale(1.22) translate(-2%, -1%); } }
+.shade { position: absolute; inset: 0; background: radial-gradient(circle, rgba(20,8,11,.1), rgba(20,8,11,.88)); }
+.bar { position: absolute; left: 0; right: 0; height: 12vh; background: #000; z-index: 3; animation: bars 1.6s .3s cubic-bezier(.7,0,.3,1) both; } .bt { top: 0; } .bb { bottom: 0; } @keyframes bars { from { height: 50vh; } }
+.beam { position: absolute; inset: 0; pointer-events: none; animation: beam 6s ease-in-out infinite alternate; } .b1 { background: conic-gradient(from 200deg at 22% -12%, transparent, rgba(255,200,61,.22) 7deg, transparent 15deg); } .b2 { background: conic-gradient(from 165deg at 78% -12%, transparent, rgba(255,77,121,.25) 7deg, transparent 15deg); animation-delay: -3s; } @keyframes beam { from { opacity: .35; transform: translateX(-16px); } to { opacity: 1; transform: translateX(16px); } }
+.title { position: relative; z-index: 4; padding: 0 16px; }
+.pre { font: 600 11px "Poppins"; letter-spacing: .34em; color: var(--gold); margin: 0 0 8px; animation: rise 1s 1.2s both; }
+.title h2 { margin: 0; font: 400 clamp(64px, 17vw, 230px)/.86 "Bebas Neue"; letter-spacing: .04em; display: flex; flex-direction: column; align-items: center; text-shadow: 0 10px 50px rgba(0,0,0,.7); }
+.title h2 span { background: linear-gradient(180deg, #fff, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; animation: rise 1s 1.4s both; } .title h2 span:last-child { animation-delay: 1.8s; }
+.title h2 em { font-style: normal; font-size: .3em; letter-spacing: .5em; color: var(--pink); animation: rise 1s 1.6s both; margin: 6px 0; }
+.tagline { font: 300 clamp(14px, 2.2vw, 22px) "Poppins"; letter-spacing: .22em; text-transform: uppercase; color: var(--ink); margin: 14px 0 20px; animation: rise 1s 2s both; }
+.meta { display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap; font: 600 11px "Poppins"; letter-spacing: .2em; color: var(--gold); animation: rise 1s 2.2s both; } .rate { padding: 3px 10px; border: 2px solid var(--gold); }
+@keyframes rise { from { opacity: 0; transform: translateY(40px); filter: blur(6px); } }
+.cue { position: absolute; bottom: 14vh; z-index: 4; color: var(--gold); font-size: 30px; animation: bob 1.6s infinite; } @keyframes bob { 50% { transform: translateY(8px); } }
+
+.ticker { overflow: hidden; background: linear-gradient(90deg, var(--gold), var(--pink), var(--gold)); color: var(--bg); padding: 8px 0; white-space: nowrap; } .tk { display: inline-flex; animation: mq 26s linear infinite; } .tk span { font: 400 26px "Bebas Neue"; letter-spacing: .14em; } @keyframes mq { to { transform: translateX(-50%); } }
+
+/* clapperboard */
+.clap-sec { padding: 90px 6%; text-align: center; background: radial-gradient(circle at 50% 0, #2a1218, var(--bg)); }
+.clapper { width: min(100%, 640px); margin: 0 auto; }
+.clap-top { position: relative; height: 60px; } .stick-t, .stick-b { position: absolute; left: 0; right: 0; height: 28px; background: repeating-linear-gradient(115deg, #fff 0 28px, #14080b 28px 56px); border: 3px solid #fff; } .stick-b { bottom: 0; } .stick-t { top: 0; transform-origin: 0 100%; animation: clap 4.5s ease-in-out infinite; }
+@keyframes clap { 0%, 70%, 100% { transform: rotate(-22deg); } 76% { transform: rotate(0); } }
+.board { background: #1a1a1a; border: 3px solid #fff; padding: 20px; text-align: left; } .row { display: grid; grid-template-columns: auto 1fr auto auto; gap: 14px; align-items: baseline; padding: 6px 0; border-bottom: 2px solid rgba(255,255,255,.5); font-family: "Bebas Neue"; letter-spacing: .08em; } .row span { font-size: 13px; color: var(--muted); } .row b { font-size: 24px; font-weight: 400; color: #fff; }
+.cd { display: flex; justify-content: space-between; align-items: center; padding: 16px 4px 6px; } .cd div { text-align: center; } .cd b { display: block; font: 400 clamp(44px, 10vw, 84px)/1 "Bebas Neue"; color: var(--gold); font-variant-numeric: tabular-nums; } .cd small { font: 600 9px "Poppins"; letter-spacing: .24em; color: var(--muted); } .cd i { font: 400 44px "Bebas Neue"; color: var(--pink); animation: blink 1s steps(2) infinite; } @keyframes blink { 50% { opacity: .15; } }
+.board-t { margin: 8px 0 0; font: 400 20px "Bebas Neue"; letter-spacing: .2em; color: var(--pink); text-align: center; }
+
+/* ticket-stub events */
+.now { padding: 80px 5%; background: var(--bg2); }
+.tickets { display: grid; gap: 24px; max-width: 920px; margin: 0 auto; }
+.tk-card { display: flex; background: linear-gradient(135deg, #ffd95c, #f0a500); color: #3a0b16; border-radius: 14px; filter: drop-shadow(0 18px 30px rgba(0,0,0,.5)); transition: transform .45s cubic-bezier(.2,.8,.2,1), filter .4s; position: relative; }
+.tk-card:hover { transform: translateY(-8px) rotate(-.6deg); filter: drop-shadow(0 28px 44px rgba(255,200,61,.3)); }
+.tk-l { flex: 1; padding: 28px 30px; -webkit-mask: radial-gradient(circle at 100% 0, transparent 12px, #000 13px) top / 100% 51% no-repeat, radial-gradient(circle at 100% 100%, transparent 12px, #000 13px) bottom / 100% 51% no-repeat; mask: radial-gradient(circle at 100% 0, transparent 12px, #000 13px) top / 100% 51% no-repeat, radial-gradient(circle at 100% 100%, transparent 12px, #000 13px) bottom / 100% 51% no-repeat; }
+.tk-l small { font: 600 10px "Poppins"; letter-spacing: .28em; color: #b3173f; } .tk-l h3 { margin: 4px 0 6px; font: 400 48px/1 "Bebas Neue"; letter-spacing: .04em; } .tk-l p { margin: 2px 0; font-size: 14px; } .when { font-weight: 600; } .tk-l hr { border: 0; border-top: 2px dashed rgba(58,11,22,.45); margin: 14px 0; }
+.venue { font: 400 26px "Bebas Neue", sans-serif; letter-spacing: .06em; margin: 0 0 2px; } .addr { color: inherit; opacity: .8; } .note { font-weight: 600; color: #b3173f; margin-top: 8px !important; } .tk-l .link { color: #3a0b16; border-color: #3a0b16; }
+.tk-r { width: 118px; border-left: 3px dashed rgba(58,11,22,.5); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; font: 600 10px "Poppins"; letter-spacing: .2em; padding: 14px; } .tk-r strong { font: 400 56px/1 "Bebas Neue"; } .tk-r em { font: 400 18px "Bebas Neue"; font-style: normal; letter-spacing: .1em; }
+.tk-r .bars { width: 64px; height: 30px; }
+
+/* cast */
+.cast { padding: 90px 5%; }
+.posters { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 22px; max-width: 1100px; margin: 0 auto; align-items: center; }
+.poster { position: relative; margin: 0; aspect-ratio: 2/3; overflow: hidden; border: 3px solid var(--gold); cursor: pointer; box-shadow: 0 24px 50px rgba(0,0,0,.6); transition: transform .6s cubic-bezier(.2,.8,.2,1); } .poster:hover { transform: translateY(-12px) rotate(-1.5deg) scale(1.03); } .poster:nth-of-type(2):hover { transform: translateY(-12px) rotate(1.5deg) scale(1.03); }
+.poster img { width: 100%; height: 100%; object-fit: cover; filter: sepia(.4) saturate(1.3) contrast(1.1); transition: transform .8s; } .poster:hover img { transform: scale(1.1); } .poster::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 45%, rgba(20,8,11,.95)); }
+.poster figcaption { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 20px; text-align: center; display: flex; flex-direction: column; } .poster small { font: 600 9px "Poppins"; letter-spacing: .34em; color: var(--gold); } .poster b { font: 400 clamp(38px, 5vw, 62px)/1 "Bebas Neue"; letter-spacing: .06em; } .poster span { font: 600 10px "Poppins"; letter-spacing: .24em; color: var(--pink); }
+.trailer { position: relative; aspect-ratio: 16/10; border: 3px solid var(--pink); overflow: hidden; cursor: pointer; background: #000; outline: none; box-shadow: 0 0 60px rgba(255,77,121,.35); transition: transform .5s; } .trailer.playing { transform: scale(1.05); }
+.trailer video { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) brightness(.6); transition: filter .7s; } .trailer.playing video { filter: none; }
+.t-ov { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: rgba(20,8,11,.45); transition: opacity .5s; } .trailer.playing .t-ov { opacity: 0; } .pl { width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--gold); color: var(--gold); display: grid; place-items: center; padding-left: 4px; animation: pp 2s infinite; } @keyframes pp { 0% { box-shadow: 0 0 0 0 rgba(255,200,61,.6); } 100% { box-shadow: 0 0 0 22px rgba(255,200,61,0); } } .t-ov b { font: 400 26px "Bebas Neue"; letter-spacing: .2em; } .t-ov small { font: 600 9px "Poppins"; letter-spacing: .24em; color: var(--gold); }
+.rec { position: absolute; top: 12px; left: 14px; width: 12px; height: 12px; border-radius: 50%; background: #f22; animation: blink 1s steps(2) infinite; } .tc { position: absolute; top: 8px; right: 14px; font: 400 18px "Bebas Neue"; letter-spacing: .1em; color: #fff; }
+
+/* reel */
+.reel { padding: 70px 0 80px; background: var(--bg2); overflow: hidden; }
+.strip { background: #000; padding: 22px 0; border-block: 14px dashed #2a2a2a; } .frames { display: flex; gap: 14px; width: max-content; animation: reel 40s linear infinite; padding-left: 14px; } .strip:hover .frames { animation-play-state: paused; } @keyframes reel { to { transform: translateX(-50%); } }
+.fr { position: relative; margin: 0; width: 220px; height: 280px; flex: none; display: grid; place-items: center; font-size: 64px; overflow: hidden; border: 2px solid #333; transition: transform .4s; } .fr[data-lightbox] { cursor: pointer; } .fr:hover { transform: scale(1.05); z-index: 2; } .fr img { width: 100%; height: 100%; object-fit: cover; filter: sepia(.5) contrast(1.15); }
+.f1 { background: linear-gradient(135deg, #ffd95c, #c88a00); } .f2 { background: linear-gradient(135deg, #ff4d79, #7a0b2a); } .f3 { background: linear-gradient(135deg, #5aa7ff, #1b3a8a); } .f4 { background: linear-gradient(135deg, #ff9a3d, #c4361b); }
+.fr figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 8px 8px; text-align: center; font: 400 20px "Bebas Neue"; letter-spacing: .1em; background: linear-gradient(transparent, rgba(0,0,0,.85)); }
+
+/* viewfinder */
+.loc { padding: 90px 5%; } .loc-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; max-width: 1040px; margin: 0 auto; align-items: center; }
+.vf { position: relative; height: 380px; border: 2px solid rgba(255,255,255,.2); } .vf iframe { width: 100%; height: 100%; border: 0; filter: grayscale(.8) contrast(1.1) brightness(.85); } .vf i { position: absolute; width: 34px; height: 34px; border: 3px solid #fff; } .c1 { top: 10px; left: 10px; border-right: 0; border-bottom: 0; } .c2 { top: 10px; right: 10px; border-left: 0; border-bottom: 0; } .c3 { bottom: 10px; left: 10px; border-right: 0; border-top: 0; } .c4 { bottom: 10px; right: 10px; border-left: 0; border-top: 0; }
+.vrec { position: absolute; top: 18px; left: 54px; font: 400 18px "Bebas Neue"; letter-spacing: .14em; display: flex; align-items: center; gap: 8px; text-shadow: 0 0 6px #000; } .vrec u { width: 11px; height: 11px; border-radius: 50%; background: #f22; animation: blink 1s steps(2) infinite; } .vtc { position: absolute; bottom: 16px; right: 54px; font: 400 17px "Bebas Neue"; letter-spacing: .12em; text-shadow: 0 0 6px #000; }
+.loc-txt ul { list-style: none; padding: 0; margin: 14px 0; display: grid; gap: 8px; color: var(--muted); font-size: 14px; } .loc-txt .venue { color: var(--gold); font-size: 34px; } .loc-txt .addr { color: var(--muted); }
+
+/* credits */
+.credits { padding: 70px 5% 100px; background: #000; text-align: center; }
+.roll { position: relative; height: 380px; overflow: hidden; max-width: 560px; margin: 20px auto 0; -webkit-mask: linear-gradient(transparent, #000 20%, #000 80%, transparent); mask: linear-gradient(transparent, #000 20%, #000 80%, transparent); }
+.roll-in { animation: roll 26s linear infinite; padding-top: 100%; } @keyframes roll { to { transform: translateY(-100%); } }
+.roll-in p { margin: 26px 0 4px; font: 600 11px "Poppins"; letter-spacing: .3em; color: var(--gold); } .roll-in b { display: block; font: 400 36px/1.1 "Bebas Neue"; letter-spacing: .1em; }
+.roll-in h2 { margin: 50px 0 10px; font: 400 clamp(50px, 9vw, 84px)/1 "Bebas Neue"; letter-spacing: .06em; color: var(--pink); } .roll-in h2 i { font-style: normal; color: var(--gold); } .roll-in small { font: 600 9px "Poppins"; letter-spacing: .26em; color: var(--muted); display: block; padding-bottom: 60px; }
+
+@media (max-width: 860px) {
+  .tn { display: none; } .top { justify-content: space-between; } .lang { margin-left: auto; }
+  .posters { grid-template-columns: 1fr 1fr; } .trailer { grid-column: 1 / -1; grid-row: 1; } .loc-grid { grid-template-columns: 1fr; } .vf { height: 280px; }
+  .tk-card { flex-direction: column; } .tk-l { -webkit-mask: none; mask: none; padding: 24px 22px; } .tk-r { width: 100%; flex-direction: row; justify-content: space-around; border-left: 0; border-top: 3px dashed rgba(58,11,22,.5); padding: 12px; } .tk-r strong { font-size: 40px; }
+  .t-stub { width: 80px; padding: 10px; } .t-main { padding: 24px 14px; } .fr { width: 170px; height: 220px; }
+  .row { grid-template-columns: auto 1fr; } .cd b { font-size: 46px; }
+}
