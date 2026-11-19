@@ -1,0 +1,10 @@
+/* Linen & Lace */
+:root { --bg: #f3ede4; --bg2: #ebe3d6; --ink: #3b3631; --muted: #8a7f72; --accent: #a8706a; --accent2: #d4b6a4; --card: #fbf8f3; --card-line: #e0d6c6; --gate-bg: #f3ede4; --head: "Cormorant Garamond", serif; --body: "Cormorant Garamond", serif; --script: "Pinyon Script", cursive; --lb-bg: #fbf8f3; --r: 6px; }
+body { background-image: radial-gradient(rgba(120,100,70,.06) 1px, transparent 1px); background-size: 12px 12px; font-size: 19px; }
+.small, .dd, .ev .tg, .cd small, .pp small, .fam small, .end small, .chip small, .solid, .line, .link, .g-s, .g-btn { font-family: "Courier Prime", monospace !important; }
+.small { letter-spacing: .24em; } .names, .g-n { letter-spacing: 0; } .hero { padding-bottom: 40px; }
+.stitch { position: absolute; inset: 14px; border: 2px dashed var(--accent2); border-radius: 10px; pointer-events: none; } .gate { overflow: hidden; }
+.lace { height: 22px; margin: 6px auto; max-width: 920px; background: radial-gradient(circle at 12px 0, transparent 9px, var(--card-line) 9.5px 11px, transparent 11.5px) 0 0 / 24px 22px repeat-x; opacity: .9; }
+.ev { border-radius: 6px; background: var(--card); border: 1px solid var(--card-line); box-shadow: 0 8px 20px rgba(80,60,40,.08); } .ev::before { content: ""; position: absolute; inset: 7px; border: 1px dashed var(--accent2); border-radius: 4px; pointer-events: none; } .chip { border-radius: 4px; background: var(--accent); }
+.cd div { border-radius: 4px; background: var(--card); border-style: dashed; border-color: var(--accent2); } .oval { border-radius: 4px; aspect-ratio: 4/5; border-width: 8px; } .map, .film { border-radius: 4px; border-width: 8px; }
+.sec { padding: 26px 6%; } .h { font-style: italic; } .btns .solid { border-radius: 4px; } .btns .line { border-radius: 4px; } .solid, .line { text-transform: none; letter-spacing: .06em; }

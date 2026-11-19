@@ -1,0 +1,45 @@
+/* Own copy for "The Wedding Menu": all copy written for this design only. */
+window.CONTENT = {
+  en: {
+    lang: "मराठी", back: "← ALL DESIGNS",
+    copied: "Address copied!", cal_done: "Reservation saved to your calendar download.", copy_fail: "Copy isn't available here.",
+    share_text: "You are invited to dine at the wedding of Shivani & Akash. Pune, 11 and 12 December 2026.",
+    chef1_role: "HEAD CHEF", chef2_role: "SOUS CHEF",
+    chef1_bio: "Plans the menu, tastes everything twice, cries at the dessert.", chef2_bio: "Handles the heat, the humour and the dancing.",
+    g_est: "ESTABLISHED WITH LOVE", g_name: "The Wedding Menu", g_sub: "A tasting of three celebrations", g_open: "OPEN THE MENU",
+    m_title: "The Wedding Menu", m_sub: "Pune · 11 and 12 December 2026", m_serves: "SERVES EVERYONE WE LOVE",
+    c1_k: "STARTER", c1_d: "Friday, 11 December", c1_n: "The Haldi", c1_t: "10:00 AM",
+    c1_i: "Turmeric paste, marigold petals, loud laughter and cousins armed with water.", c1_p: "Yellow or white outfits you do not mind getting stained.", c1_v: "Sunshine Lawns, 45 Garden Lane, Kothrud, Pune 411038",
+    c2_k: "MAIN COURSE", c2_d: "Saturday, 12 December", c2_n: "The Wedding Ceremony", c2_t: "11:30 AM",
+    c2_i: "Heartfelt vows, blessings from both families, music, and a few happy tears.", c2_p: "Traditional attire and a spare tissue.", c2_v: "The Gulmohar Courtyard, 12 Riverside Road, Koregaon Park, Pune 411001",
+    c3_k: "DESSERT", c3_d: "Saturday, 12 December", c3_n: "Dinner & Dancing", c3_t: "7:00 PM",
+    c3_i: "A long dinner, a great playlist and relatives who swore they would not dance.", c3_p: "Festive wear and very comfortable shoes.", c3_v: "The Gulmohar Courtyard, 12 Riverside Road, Koregaon Park, Pune 411001",
+    price: "PRICE: PRICELESS", dir: "FIND THE TABLE",
+    foot_h: "House notes", f1: "Dietary needs? Tell us and we will look after you.", f2: "Little guests are most welcome, and they eat free.", f3: "Gratuity: blessings, gratefully accepted.", f4: "Allergies: we are not aware of any to love.",
+    chef_h: "Your chefs this evening", reserve: "MAKE A RESERVATION", copyb: "COPY ADDRESS", share: "SEND THE MENU",
+    map_h: "Finding the restaurant", map_p: "Free valet parking. Pune Junction is 10 minutes away, the airport about 25.",
+    film_h: "A short appetiser", hover: "TAP TO PLAY",
+    fin: "Thank you for dining with us.", sign: "Shivani & Akash", footer: "BON APPÉTIT AND BLESSINGS"
+  },
+  mr: {
+    lang: "English", back: "← सर्व डिझाईन्स",
+    copied: "पत्ता कॉपी झाला!", cal_done: "आरक्षण कॅलेंडरसाठी डाउनलोड झाले.", copy_fail: "येथे कॉपी करता येत नाही.",
+    share_text: "शिवानी आणि आकाश यांच्या विवाहाच्या मेजवानीचे आपणास निमंत्रण. पुणे, ११ आणि १२ डिसेंबर २०२६.",
+    chef1_role: "मुख्य शेफ", chef2_role: "सहायक शेफ",
+    chef1_bio: "मेन्यू ठरवते, सगळे दोनदा चाखते आणि मिठाई पाहून भावुक होते.", chef2_bio: "उष्णता, विनोद आणि नाच सगळे सांभाळतो.",
+    g_est: "प्रेमाने स्थापित", g_name: "विवाह मेन्यू", g_sub: "तीन सोहळ्यांची चव", g_open: "मेन्यू उघडा",
+    m_title: "विवाह मेन्यू", m_sub: "पुणे · ११ आणि १२ डिसेंबर २०२६", m_serves: "आमच्या सर्व लाडक्यांसाठी",
+    c1_k: "सुरुवात", c1_d: "शुक्रवार, ११ डिसेंबर", c1_n: "हळद", c1_t: "सकाळी १०:००",
+    c1_i: "हळदीची पेस्ट, झेंडूच्या पाकळ्या, मोठे हास्य आणि पाणी घेऊन तयार असलेले भावंडे.", c1_p: "डाग पडले तरी चालतील असे पिवळे किंवा पांढरे कपडे.", c1_v: "सनशाइन लॉन्स, ४५ गार्डन लेन, कोथरूड, पुणे ४११०३८",
+    c2_k: "मुख्य जेवण", c2_d: "शनिवार, १२ डिसेंबर", c2_n: "विवाह सोहळा", c2_t: "सकाळी ११:३०",
+    c2_i: "मनापासूनची वचने, दोन्ही कुटुंबांचे आशीर्वाद, संगीत आणि काही आनंदाश्रू.", c2_p: "पारंपरिक पोशाख आणि एक जास्तीचा रुमाल.", c2_v: "गुलमोहर प्रांगण, १२ रिव्हरसाइड रोड, कोरेगाव पार्क, पुणे ४११००१",
+    c3_k: "गोड शेवट", c3_d: "शनिवार, १२ डिसेंबर", c3_n: "स्नेहभोजन आणि नृत्य", c3_t: "संध्याकाळी ७:००",
+    c3_i: "निवांत जेवण, उत्तम गाणी आणि नाचणार नाही म्हणणारे नातेवाईक.", c3_p: "आकर्षक पोशाख आणि अतिशय आरामदायी बूट.", c3_v: "गुलमोहर प्रांगण, १२ रिव्हरसाइड रोड, कोरेगाव पार्क, पुणे ४११००१",
+    price: "किंमत: अमूल्य", dir: "टेबल शोधा",
+    foot_h: "घरगुती सूचना", f1: "विशेष आहारगरज? आम्हाला सांगा, आम्ही काळजी घेऊ.", f2: "छोट्या पाहुण्यांचे स्वागतच आहे, आणि त्यांचे जेवण मोफत.", f3: "बक्षीस: आशीर्वाद, कृतज्ञतेने स्वीकारले जातील.", f4: "ॲलर्जी: प्रेमाची ॲलर्जी कोणाला असल्याचे आम्हाला माहीत नाही.",
+    chef_h: "आजच्या संध्याकाळचे शेफ", reserve: "आरक्षण करा", copyb: "पत्ता कॉपी करा", share: "मेन्यू पाठवा",
+    map_h: "रेस्टॉरंट शोधताना", map_p: "मोफत व्हॅलेट पार्किंग. पुणे जंक्शन १० मिनिटांवर, विमानतळ सुमारे २५ मिनिटांवर.",
+    film_h: "एक छोटीशी सुरुवात", hover: "पाहण्यासाठी टॅप करा",
+    fin: "आमच्यासोबत जेवल्याबद्दल धन्यवाद.", sign: "शिवानी आणि आकाश", footer: "आनंद घ्या आणि आशीर्वाद द्या"
+  }
+};

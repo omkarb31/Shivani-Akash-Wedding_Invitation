@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#4a1424" />
+<meta name="description" content="A wedding invitation booklet. Turn the pages: Shivani & Akash, 12 December 2026, Pune." />
+<meta property="og:title" content="Shivani & Akash — Wedding Invitation" />
+<meta property="og:description" content="Turn the pages of our invitation. 12 December 2026, Pune." />
+<meta property="og:image" content="https://omkarb31.github.io/Shivani-Akash-Wedding_Invitation/19-flipbook-card/media/bride.jpg" />
+<title>Shivani &amp; Akash — Invitation Booklet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&family=Cinzel:wght@400;600&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="shared/core.css?v=10" />
+<link rel="stylesheet" href="style.css?v=10" />
+<script defer src="shared/content.js?v=10"></script>
+<script defer src="shared/core.js?v=10"></script>
+<script defer src="app.js?v=10"></script>
+</head>
+<body class="locked">
+
+<div class="gate" data-gate>
+  <div class="g-in">
+    <div class="closed-book"><div class="cv"><span>✦</span><b>Shivani<br>&amp; Akash</b><small data-i="date"></small></div></div>
+    <p class="g-s" data-i="invited"></p>
+    <button class="g-btn" data-open type="button"><span data-i="open"></span></button>
+  </div>
+</div>
+
+<header class="top"><span class="mono">S <i>&amp;</i> A</span><button class="lang" data-lang-toggle type="button"><span data-lang-label></span></button></header>
+
+<main class="desk">
+  <button class="nav prev" id="prev" type="button" aria-label="Previous page">‹</button>
+
+  <div class="book" id="book">
+    <!-- 1 cover -->
+    <div class="leaf" data-n="1">
+      <div class="face front cover-page">
+        <div class="foil"><i></i><i></i><i></i><i></i></div>
+        <p class="s-small" data-i="together"></p>
+        <h1 class="names">Shivani<em>&amp;</em>Akash</h1>
+        <p class="s-small" data-i="date"></p>
+        <p class="hint" data-i="details"></p>
+      </div>
+      <div class="face back"><i class="fl">❀</i></div>
+    </div>
+
+    <!-- 2 blessing + family -->
+    <div class="leaf" data-n="2">
+      <div class="face front">
+        <span class="pn">2</span>
+        <p class="s-small" data-i="ganesh"></p>
+        <h2 class="h" data-i="fam_h"></h2>
+        <div class="fam"><div><small data-i="fam_bride"></small><b data-i="fam_bride_n"></b></div><span>❀</span><div><small data-i="fam_groom"></small><b data-i="fam_groom_n"></b></div></div>
+        <p class="lead" data-i="intro"></p>
+      </div>
+      <div class="face back"><i class="fl">✿</i></div>
+    </div>
+
+    <!-- 3 celebrations -->
+    <div class="leaf" data-n="3">
+      <div class="face front scroll-page">
+        <span class="pn">3</span>
+        <h2 class="h" data-i="events_h"></h2>
+        <article class="ev"><div class="d">11<small>DEC</small></div><div><h3 data-i="haldi_name"></h3><p class="when" data-i="haldi_time"></p><p class="venue" data-i="haldi_venue"></p><p class="addr" data-i="haldi_addr" data-html></p></div></article>
+        <article class="ev"><div class="d">12<small>DEC</small></div><div><h3 data-i="wed_name"></h3><p class="when" data-i="wed_time"></p><p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p></div></article>
+        <article class="ev"><div class="d">12<small data-i="evening"></small></div><div><h3 data-i="rec_name"></h3><p class="when" data-i="rec_time"></p><p class="note" data-i="rec_note"></p></div></article>
+        <button class="gold" data-action="calendar" type="button">＋ <span data-i="calendar"></span></button>
+      </div>
+      <div class="face back"><i class="fl">❀</i></div>
+    </div>
+
+    <!-- 4 couple -->
+    <div class="leaf" data-n="4">
+      <div class="face front scroll-page">
+        <span class="pn">4</span>
+        <h2 class="h" data-i="couple_h"></h2>
+        <div class="duo">
+          <figure data-lightbox="c" data-img="media/bride.jpg" data-name="Shivani" data-role="bride_role" data-bio="bride_bio"><div class="oval"><img src="media/bride.jpg" alt="Shivani" loading="lazy" /></div><figcaption><b>Shivani</b><small data-i="bride_role"></small></figcaption></figure>
+          <figure data-lightbox="c" data-img="media/groom.jpg" data-name="Akash" data-role="groom_role" data-bio="groom_bio"><div class="oval"><img src="media/groom.jpg" alt="Akash" loading="lazy" /></div><figcaption><b>Akash</b><small data-i="groom_role"></small></figcaption></figure>
+        </div>
+        <p class="lead sm" data-i="bride_bio"></p>
+      </div>
+      <div class="face back"><i class="fl">✿</i></div>
+    </div>
+
+    <!-- 5 film -->
+    <div class="leaf" data-n="5">
+      <div class="face front scroll-page">
+        <span class="pn">5</span>
+        <h2 class="h" data-i="story_h"></h2>
+        <div class="tv" data-hovervideo tabindex="0"><video muted loop playsinline preload="auto" src="media/dummy.mp4"></video><div class="v-ov"><span>▶</span><small data-i="tap"></small></div></div>
+        <p class="lead sm" data-i="story_p"></p>
+      </div>
+      <div class="face back"><i class="fl">❀</i></div>
+    </div>
+
+    <!-- 6 venue -->
+    <div class="leaf" data-n="6">
+      <div class="face front scroll-page">
+        <span class="pn">6</span>
+        <h2 class="h" data-i="venue_h"></h2>
+        <div class="map"><iframe title="Venue map" loading="lazy" src="https://maps.google.com/maps?q=Koregaon+Park+Pune&amp;output=embed"></iframe></div>
+        <p class="venue" data-i="wed_venue"></p><p class="addr" data-i="wed_addr" data-html></p>
+        <ul><li>✈ <span data-i="airport"></span></li><li>🚆 <span data-i="train"></span></li><li>🚗 <span data-i="parking"></span></li></ul>
+        <a class="gold" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Koregaon+Park+Pune"><span data-i="openmap"></span> ↗</a>
+      </div>
+      <div class="face back"><i class="fl">✿</i></div>
+    </div>
+
+    <!-- 7 thanks -->
+    <div class="leaf" data-n="7">
+      <div class="face front end-page">
+        <span class="pn">7</span>
+        <span class="big">❀</span>
+        <p class="closing" data-i="withlove"></p>
+        <h2 class="sig">Shivani <i>&amp;</i> Akash</h2>
+        <p class="s-small" data-i="date"></p>
+        <button class="gold" data-action="share" type="button">↗ <span data-i="share"></span></button>
+        <button class="out" id="again" type="button">↺ <span data-i="nav_home"></span></button>
+        <small class="foot" data-i="footer"></small>
+      </div>
+      <div class="face back"><i class="fl">❀</i></div>
+    </div>
+  </div>
+
+  <button class="nav next" id="next" type="button" aria-label="Next page">›</button>
+  <div class="dots" id="dots"></div>
+</main>
+<a class="back-hub" href="../index.html" data-i="back"></a>
+</body>
+</html>

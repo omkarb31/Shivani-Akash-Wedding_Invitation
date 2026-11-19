@@ -8,7 +8,7 @@
     <title>Shivani &amp; Akash — Choose a design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@700&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Great+Vibes&family=Italiana&family=Marcellus&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Monoton&family=Bodoni+Moda:ital,wght@0,800;1,600&family=Special+Elite&family=Shippori+Mincho:wght@800&family=Limelight&family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@700&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Great+Vibes&family=Italiana&family=Marcellus&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Monoton&family=Bodoni+Moda:ital,wght@0,800;1,600&family=Special+Elite&family=Shippori+Mincho:wght@800&family=Limelight&family=Press+Start+2P&family=Pinyon+Script&family=Caveat:wght@700&family=UnifrakturCook:wght@700&family=Baloo+2:wght@800&family=Parisienne&family=Fraunces:ital,wght@1,300&family=Yatra+One&display=swap" rel="stylesheet" />
     <style>
       :root { --bg: #1a0f12; --ink: #f6ead7; --muted: #bfa99a; --gold: #e0b860; --rose: #e97a97; }
       * { box-sizing: border-box; }
@@ -55,6 +55,7 @@
       .card:hover .open { gap: 20px; }
       .chips { display: flex; gap: 6px; margin-bottom: 14px; }
       .chips i { width: 16px; height: 16px; border-radius: 50%; border: 1px solid rgba(255,255,255,.35); }
+      .group-h { text-align: center; margin: 10px 0 26px; } .group-h .kick { display: block; font-size: 10px; letter-spacing: .3em; color: var(--gold); font-weight: 600; margin: 0 0 8px; } .group-h h3 { margin: 0 0 6px; font: 400 clamp(26px, 4vw, 40px) "Playfair Display", serif; } .group-h p:last-child { margin: 0; color: var(--muted); font-size: 14px; } .grid { margin-bottom: 20px; } section.group-h + .grid { margin-bottom: 56px; }
       footer { position: relative; z-index: 2; text-align: center; padding: 10px 16px 40px; color: var(--muted); font-size: 11px; letter-spacing: .12em; }
       .curtain { position: fixed; inset: 0; z-index: 100; background: radial-gradient(circle, #3a1a22, #12090c); opacity: 0; pointer-events: none; transition: opacity .55s; display: grid; place-items: center; font: italic 400 clamp(30px, 6vw, 60px) "Playfair Display", serif; color: var(--gold); }
       .curtain.on { opacity: 1; pointer-events: all; }
@@ -73,56 +74,129 @@
       <section class="hero">
         <p class="kicker">WEDDING INVITATION</p>
         <h1>Shivani <em>&amp;</em> Akash</h1>
-        <p class="sub">Twelve completely different websites for the same invitation: 12 · 12 · 2026, Pune. Each has its own layout, entrance and way of exploring. Pick the one that feels most like you.</p>
+        <p class="sub">Twenty-seven completely different websites for the same invitation: 12 · 12 · 2026, Pune. Each has its own layout, entrance and way of exploring. Pick the one that feels most like you.</p>
         <button class="surprise" id="surprise" type="button">✦ SURPRISE ME</button>
       </section>
 
-      <section class="grid" id="grid">
-        <a class="card" href="01-classic-wine/index.html" style="--d:.05s;--pbg:linear-gradient(160deg,#f5efe4,#e6d8bf);--pa:linear-gradient(160deg,#8b3c48,#612a34);--pb:#e6c790;--pt:#f5e8cb;--pf:'Playfair Display',serif;--pst:italic">
+      <section class="group-h"><p class="kick">NEW: DIFFERENT IN WORDS, NOT JUST LOOKS</p><h3>Their own stories &amp; content</h3><p>These two were written from scratch: a menu and a newspaper. Nothing is copied from the others.</p></section>
+      <section class="grid" id="gridnew">
+        <a class="card" href="29-wedding-menu/index.html" style="--d:0.11s;--pbg:radial-gradient(circle at 50% 0,#2a221b,#14110f);--pa:#1c1814;--pb:#c8a45a;--pt:#e6cf8e;--pf:'Playfair Display',serif;--ps:19px;--pst:italic;--pr:0">
+          <div class="preview"><div class="dots"><i>🍽️</i><i>✦</i><i>🥂</i><i>✦</i></div><div class="mini"><small>THE MENU</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 29</span><h2>The Wedding Menu</h2><p>Written as a fine-dining menu: Starter, Main course and Dessert are your three celebrations, with "ingredients" and "pairs with" notes.</p><div class="chips"><i style="background:#14110f"></i><i style="background:#c8a45a"></i><i style="background:#f4ead2"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="30-daily-forever/index.html" style="--d:0.17s;--pbg:linear-gradient(160deg,#d8d1c0,#efe9dc);--pa:#efe9dc;--pb:#1a1a18;--pt:#1a1a18;--pf:'UnifrakturCook',serif;--ps:21px;--pr:0">
+          <div class="preview"><div class="dots"><i>★</i><i>✦</i><i>★</i><i>✳</i></div><div class="mini"><small>EXTRA!</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 30</span><h2>The Daily Forever</h2><p>A newspaper front page with its own news: headlines, weather ("chance of dancing: 100%"), classifieds and profiles.</p><div class="chips"><i style="background:#efe9dc"></i><i style="background:#1a1a18"></i><i style="background:#b3261e"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+      </section>
+      <section class="group-h"><p class="kick">FOR EVERY FAMILY &amp; FAITH</p><h3>Elegant &amp; universal</h3><p>No religious symbols, only beauty. Safe to send to any relative or friend, with WhatsApp share built in.</p></section>
+      <section class="grid" id="grid0">
+        <a class="card" href="23-golden-hour/index.html" style="--d:0.05s;--pbg:linear-gradient(160deg,#ffe9b8,#ff9a76 60%,#6b3c82);--pa:rgba(255,255,255,.7);--pb:#ff9a4a;--pt:#7a3b1c;--pf:'Playfair Display',serif;--ps:19px;--pst:italic;--pr:24px">
+          <div class="preview"><div class="dots"><i>☀</i><i>✦</i><i>☀</i><i>✧</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 23</span><h2>Golden Hour</h2><p>The sky changes as you scroll, from morning gold through sunset to a starry dusk, matching the day of your celebrations.</p><div class="chips"><i style="background:#ffe9b8"></i><i style="background:#d9733a"></i><i style="background:#6b3c82"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="24-lavender-fields/index.html" style="--d:0.11s;--pbg:linear-gradient(160deg,#eadcfb,#faf7ff);--pa:rgba(255,255,255,.9);--pb:#7d62b8;--pt:#5f4a96;--pf:'Parisienne',cursive;--ps:26px;--pr:26px">
+          <div class="preview"><div class="dots"><i>🦋</i><i>❀</i><i>🦋</i><i>✿</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 24</span><h2>Lavender Fields</h2><p>Soft lilac fields with layered purple hills and fluttering butterflies. Romantic and calm.</p><div class="chips"><i style="background:#faf7ff"></i><i style="background:#7d62b8"></i><i style="background:#c4b0e8"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="25-coastal-blue/index.html" style="--d:0.17s;--pbg:linear-gradient(160deg,#dff1f7,#9ccfe0);--pa:#fff;--pb:#2f7fa3;--pt:#1f4a63;--pf:'Playfair Display',serif;--ps:19px;--pst:italic;--pr:8px">
+          <div class="preview"><div class="dots"><i>⛵</i><i>🐚</i><i>🌊</i><i>⛵</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 25</span><h2>Coastal Blue</h2><p>Fresh sea blues with rolling waves between sections, a little sailboat and postcard-style event cards.</p><div class="chips"><i style="background:#f6fbfc"></i><i style="background:#2f7fa3"></i><i style="background:#9ccfe0"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="26-linen-lace/index.html" style="--d:0.23s;--pbg:linear-gradient(160deg,#f3ede4,#e0d4c2);--pa:#fbf8f3;--pb:#d4b6a4;--pt:#a8706a;--pf:'Pinyon Script',cursive;--ps:26px;--pr:6px">
+          <div class="preview"><div class="dots"><i>✿</i><i>·</i><i>❀</i><i>✿</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 26</span><h2>Linen &amp; Lace</h2><p>Warm linen paper, lace-scalloped dividers and typewriter details. Quiet, tidy and timeless.</p><div class="chips"><i style="background:#f3ede4"></i><i style="background:#a8706a"></i><i style="background:#d4b6a4"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="27-midnight-garden/index.html" style="--d:0.29s;--pbg:radial-gradient(circle at 50% 0,#1d3560,#0a1428);--pa:rgba(255,255,255,.06);--pb:#f2b8c6;--pt:#f3ecef;--pf:'Pinyon Script',cursive;--ps:26px;--pr:26px">
+          <div class="preview"><div class="dots"><i>✦</i><i>🌙</i><i>❀</i><i>✧</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 27</span><h2>Midnight Garden</h2><p>A navy night with a glowing moon, drifting fireflies and line-art flowers that bloom after you enter.</p><div class="chips"><i style="background:#0d1b34"></i><i style="background:#f2b8c6"></i><i style="background:#e8c88a"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="13-ivory-bloom/index.html" style="--d:0.35s;--pbg:linear-gradient(160deg,#fbf7f1,#f4d9d6);--pa:rgba(255,255,255,.9);--pb:#d98e98;--pt:#b8626f;--pf:'Pinyon Script',cursive;--ps:30px;--pr:26px">
+          <div class="preview"><div class="dots"><i>❀</i><i>✿</i><i>🌸</i><i>❀</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 13</span><h2>Ivory Bloom</h2><p>Soft watercolour washes and flowing script on a long, graceful invitation scroll. Pretty on every phone.</p><div class="chips"><i style="background:#fbf7f1"></i><i style="background:#d98e98"></i><i style="background:#a7b79a"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="15-rose-gold-luxe/index.html" style="--d:0.41s;--pbg:linear-gradient(160deg,#faf3ee,#f1dcc9);--pa:linear-gradient(160deg,#d9a79f,#b76e79);--pb:#fff;--pt:#fff;--pf:'Playfair Display',serif;--ps:20px;--pr:0">
+          <div class="preview"><div class="dots"><i>✦</i><i>♡</i><i>✧</i><i>✦</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 15</span><h2>Rose Gold Luxe</h2><p>Romantic and editorial: a split-portrait hero, hairline details, a full-bleed film and a swipeable gallery.</p><div class="chips"><i style="background:#faf3ee"></i><i style="background:#b76e79"></i><i style="background:#f1dcc9"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="16-sage-botanical/index.html" style="--d:0.47s;--pbg:linear-gradient(160deg,#f7f5ee,#dbe5d0);--pa:linear-gradient(160deg,#8aa07c,#2f4a3a);--pb:#f7f5ee;--pt:#f7f5ee;--pf:'Fraunces',serif;--ps:21px;--pst:italic;--pr:56px 56px 0 0">
+          <div class="preview"><div class="dots"><i>🍃</i><i>🌿</i><i>✿</i><i>🍃</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 16</span><h2>Sage Botanical</h2><p>Eucalyptus greens, branches that grow along the edges, arched windows and leaf-shaped portraits.</p><div class="chips"><i style="background:#f7f5ee"></i><i style="background:#8aa07c"></i><i style="background:#2f4a3a"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="01-classic-wine/index.html" style="--d:0.53s;--pbg:linear-gradient(160deg,#f5efe4,#e6d8bf);--pa:linear-gradient(160deg,#8b3c48,#612a34);--pb:#e6c790;--pt:#f5e8cb;--pf:'Playfair Display',serif;--pst:italic">
           <div class="preview"><div class="dots"><i>✿</i><i>✳</i><i>✿</i><i>❁</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 01</span><h2>Classic Wine</h2><p>The original: warm ivory, wine and gold with a hover-video arch.</p><div class="chips"><i style="background:#f5efe4"></i><i style="background:#762f3c"></i><i style="background:#ae8b53"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
-        <a class="card" href="02-royal-maharaja/index.html" style="--d:.12s;--pbg:linear-gradient(160deg,#131c3e,#0a1030);--pa:linear-gradient(160deg,#2c3a7a,#121a45);--pb:#e5bb5e;--pt:#f6ecd2;--pf:'Cinzel Decorative',serif;--ps:15px;--pr:50% 50% 0 0 / 38% 38% 0 0">
+        <a class="card" href="02-royal-maharaja/index.html" style="--d:0.70s;--pbg:linear-gradient(160deg,#131c3e,#0a1030);--pa:linear-gradient(160deg,#2c3a7a,#121a45);--pb:#e5bb5e;--pt:#f6ecd2;--pf:'Cinzel Decorative',serif;--ps:15px;--pr:50% 50% 0 0 / 38% 38% 0 0">
           <div class="preview"><div class="dots"><i>❖</i><i>✦</i><i>✧</i><i>❖</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 02</span><h2>Royal Maharaja</h2><p>Scroll through palace chapters: swinging lanterns, a jharokha window and three pillars that open to reveal each ceremony.</p><div class="chips"><i style="background:#0e1530"></i><i style="background:#e5bb5e"></i><i style="background:#2c3a7a"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
-        <a class="card" href="03-garden-blush/index.html" style="--d:.19s;--pbg:linear-gradient(160deg,#fff4f1,#f9d5d9);--pa:linear-gradient(160deg,#f4b7c3,#de8aa2);--pb:#fff;--pt:#fffaf6;--pf:'Great Vibes',cursive;--ps:30px;--pr:50%">
+      </section>
+      <section class="group-h"><p class="kick">TRADITIONAL &amp; FESTIVE</p><h3>Marathi &amp; Hindu wedding styles</h3><p>Rich with tradition: Ganesh blessing, zari borders, diyas and the seven vows.</p></section>
+      <section class="grid" id="grid1">
+        <a class="card" href="14-paithani-tradition/index.html" style="--d:0.05s;--pbg:linear-gradient(160deg,#fff6e0,#f5dfa6);--pa:linear-gradient(160deg,#7a1a4f,#4d0d33);--pb:#d4a843;--pt:#f2d77e;--pf:'Yatra One',serif;--ps:17px;--pr:6px">
+          <div class="preview"><div class="dots"><i>ॐ</i><i>❁</i><i>✦</i><i>❁</i></div><div class="mini"><small>श्री गणेशाय नमः</small><b>Shivani</b><span>❁</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 14</span><h2>Paithani Tradition</h2><p>A traditional Marathi wedding card in Marathi first: ॐ Ganesh blessing, zari borders, swaying pearl strings and curtains that part.</p><div class="chips"><i style="background:#fff6e0"></i><i style="background:#7a1a4f"></i><i style="background:#d4a843"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="17-marigold-diya/index.html" style="--d:0.11s;--pbg:radial-gradient(circle at 50% 0,#7a2a12,#3a120c);--pa:linear-gradient(160deg,#ff9f1c,#c2185b);--pb:#ffb703;--pt:#fff3d6;--pf:'Playfair Display',serif;--ps:20px;--pst:italic;--pr:56px 56px 0 0">
+          <div class="preview"><div class="dots"><i>🪔</i><i>✿</i><i>✦</i><i>🪔</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 17</span><h2>Marigold &amp; Diya</h2><p>Warm festive glow: light a diya to enter, a swaying marigold toran, glowing arches and hanging photo frames.</p><div class="chips"><i style="background:#3a120c"></i><i style="background:#ffb703"></i><i style="background:#c2185b"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="21-saptapadi/index.html" style="--d:0.17s;--pbg:radial-gradient(circle at 50% 0,#6b1a38,#3a0d1c);--pa:linear-gradient(160deg,#ff9f1c,#c2185b);--pb:#ffb703;--pt:#fff3d6;--pf:'Yatra One',serif;--ps:17px;--pr:56px 56px 0 0">
+          <div class="preview"><div class="dots"><i>🪔</i><i>❁</i><i>✦</i><i>🪔</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 21</span><h2>Saptapadi</h2><p>Seven steps, seven vows: a diya lights at each step as you walk down the path. In English and Marathi.</p><div class="chips"><i style="background:#3a0d1c"></i><i style="background:#ffb703"></i><i style="background:#e8467f"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+      </section>
+      <section class="group-h"><p class="kick">HANDY FOR GUESTS</p><h3>Guides &amp; storytelling</h3><p>Practical or personal: a page-turning booklet and a love story.</p></section>
+      <section class="grid" id="grid2">
+        <a class="card" href="19-flipbook-card/index.html" style="--d:0.17s;--pbg:radial-gradient(circle at 50% 30%,#6b2238,#2e0a15);--pa:linear-gradient(145deg,#7a1c3a,#4a1424);--pb:#c9a24a;--pt:#ecd488;--pf:'Pinyon Script',cursive;--ps:26px;--pr:4px 14px 14px 4px">
+          <div class="preview"><div class="dots"><i>✦</i><i>❀</i><i>✿</i><i>✦</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 19</span><h2>Flipbook Card</h2><p>A real page-turning invitation booklet on a velvet desk. Swipe or tap to turn each page.</p><div class="chips"><i style="background:#4a1424"></i><i style="background:#c9a24a"></i><i style="background:#fbf5ea"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+        <a class="card" href="20-our-journey/index.html" style="--d:0.23s;--pbg:linear-gradient(160deg,#bfe3ff,#ffd9d0);--pa:linear-gradient(145deg,#ff8aa0,#e8517a);--pb:#fff;--pt:#fff;--pf:'Caveat',cursive;--ps:28px;--pr:24px">
+          <div class="preview"><div class="dots"><i>❤</i><i>☀</i><i>✦</i><i>❤</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
+          <div class="info"><span class="num">DESIGN 20</span><h2>Our Journey</h2><p>Our love story in five chapters: a heart travels down the timeline as you scroll, then the wedding details.</p><div class="chips"><i style="background:#bfe3ff"></i><i style="background:#e8517a"></i><i style="background:#ffc46b"></i></div><span class="open">OPEN <b>→</b></span></div>
+        </a>
+      </section>
+      <section class="group-h"><p class="kick">FOR FRIENDS &amp; FUN</p><h3>Creative &amp; playful</h3><p>Bolder experiments: a game, a movie, a magazine and more.</p></section>
+      <section class="grid" id="grid3">
+        <a class="card" href="03-garden-blush/index.html" style="--d:0.11s;--pbg:linear-gradient(160deg,#fff4f1,#f9d5d9);--pa:linear-gradient(160deg,#f4b7c3,#de8aa2);--pb:#fff;--pt:#fffaf6;--pf:'Great Vibes',cursive;--ps:30px;--pr:50%">
           <div class="preview"><div class="dots"><i>🌸</i><i>❀</i><i>🌷</i><i>✿</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 03</span><h2>Garden Blush</h2><p>A storybook: open the envelope, then follow a winding flower timeline, polaroids and a heart-shaped video.</p><div class="chips"><i style="background:#fdf2f1"></i><i style="background:#c25f7b"></i><i style="background:#8fa87d"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
-        <a class="card" href="04-starry-night/index.html" style="--d:.26s;--pbg:radial-gradient(circle at 70% 25%,#25256b,#090a1e 70%);--pa:radial-gradient(circle at 35% 30%,#2a2a80,#0b0c2a);--pb:#f5da8c;--pt:#ecebff;--pf:'Italiana',serif;--ps:24px;--pr:50%">
+        <a class="card" href="04-starry-night/index.html" style="--d:0.17s;--pbg:radial-gradient(circle at 70% 25%,#25256b,#090a1e 70%);--pa:radial-gradient(circle at 35% 30%,#2a2a80,#0b0c2a);--pb:#f5da8c;--pt:#ecebff;--pf:'Italiana',serif;--ps:24px;--pr:50%">
           <div class="preview"><div class="dots"><i>✦</i><i>✧</i><i>☾</i><i>✦</i></div><div class="mini" style="height:130px;width:130px;margin-top:30px"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 04</span><h2>Starry Night</h2><p>A live star-field sky. Tap the stars of a constellation for each event, and watch two stars drift together as you scroll.</p><div class="chips"><i style="background:#090a1e"></i><i style="background:#a99bff"></i><i style="background:#f5da8c"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
-        <a class="card" href="05-boho-terracotta/index.html" style="--d:.33s;--pbg:linear-gradient(160deg,#f6ebe0,#ecc39a);--pa:linear-gradient(160deg,#c8714f,#a24c2c);--pb:#fbf4ec;--pt:#fbf4ec;--pf:'DM Serif Display',serif;--pst:italic">
+        <a class="card" href="05-boho-terracotta/index.html" style="--d:0.23s;--pbg:linear-gradient(160deg,#f6ebe0,#ecc39a);--pa:linear-gradient(160deg,#c8714f,#a24c2c);--pb:#fbf4ec;--pt:#fbf4ec;--pf:'DM Serif Display',serif;--pst:italic">
           <div class="preview"><div class="dots"><i>☼</i><i>❀</i><i>✺</i><i>❋</i></div><div class="mini" style="box-shadow:0 0 0 6px #e8b48e,0 0 0 12px #d9a066,0 0 0 18px #b5573a"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 05</span><h2>Boho Terracotta</h2><p>A sidebar layout with a rainbow-arch trio, tabbed events, a sunrise video window and a masonry gallery.</p><div class="chips"><i style="background:#f6ebe0"></i><i style="background:#b5573a"></i><i style="background:#d9a066"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
-        <a class="card" href="06-filmy-cinema/index.html" style="--d:.4s;--pbg:linear-gradient(160deg,#2a1218,#14080b);--pa:linear-gradient(160deg,#e0204f,#7a0b2a);--pb:#ffc83d;--pt:#fff0e0;--pf:'Bebas Neue',sans-serif;--ps:26px;--pr:4px">
+        <a class="card" href="06-filmy-cinema/index.html" style="--d:0.29s;--pbg:linear-gradient(160deg,#2a1218,#14080b);--pa:linear-gradient(160deg,#e0204f,#7a0b2a);--pb:#ffc83d;--pt:#fff0e0;--pf:'Bebas Neue',sans-serif;--ps:26px;--pr:4px">
           <div class="preview"><div class="dots"><i>★</i><i>🎬</i><i>★</i><i>🍿</i></div><div class="mini" style="box-shadow:inset 12px 0 #0b0507,inset -12px 0 #0b0507,0 16px 36px rgba(0,0,0,.4)"><small>NOW SHOWING</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 06</span><h2>Filmy Cinema</h2><p>A movie website: tear the ticket, watch the trailer hero, a clapperboard countdown, ticket-stub events and rolling credits.</p><div class="chips"><i style="background:#14080b"></i><i style="background:#ff4d79"></i><i style="background:#ffc83d"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
-        <a class="card" href="07-neon-sangeet/index.html" style="--d:0.47s;--pbg:linear-gradient(160deg,#2a0b4d,#0a0614);--pa:linear-gradient(160deg,#ff2bd6,#6a0dad);--pb:#19e3ff;--pt:#fff;--pf:'Monoton',cursive;--ps:17px;--pr:10px">
+        <a class="card" href="07-neon-sangeet/index.html" style="--d:0.35s;--pbg:linear-gradient(160deg,#2a0b4d,#0a0614);--pa:linear-gradient(160deg,#ff2bd6,#6a0dad);--pb:#19e3ff;--pt:#fff;--pf:'Monoton',cursive;--ps:17px;--pr:10px">
           <div class="preview"><div class="dots"><i>♪</i><i>★</i><i>♫</i><i>✦</i></div><div class="mini" style="box-shadow:0 0 24px #ff2bd6,0 16px 36px rgba(0,0,0,.4)"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 07</span><h2>Neon Sangeet</h2><p>A synthwave sangeet night: events are a playlist, the couple are spinning vinyls, and a now-playing bar follows you down the page.</p><div class="chips"><i style="background:#0a0614"></i><i style="background:#ff2bd6"></i><i style="background:#19e3ff"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
-        <a class="card" href="08-editorial-issue/index.html" style="--d:0.54s;--pbg:linear-gradient(160deg,#f3efe8,#ddd6c8);--pa:#111;--pb:#d4231a;--pt:#f3efe8;--pf:'Bodoni Moda','Playfair Display',serif;--ps:21px;--pr:0">
+        <a class="card" href="08-editorial-issue/index.html" style="--d:0.41s;--pbg:linear-gradient(160deg,#f3efe8,#ddd6c8);--pa:#111;--pb:#d4231a;--pt:#f3efe8;--pf:'Bodoni Moda','Playfair Display',serif;--ps:21px;--pr:0">
           <div class="preview"><div class="dots"><i>✦</i><i>●</i><i>✳</i><i>✦</i></div><div class="mini"><small>THE WEDDING ISSUE</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 08</span><h2>Editorial Issue</h2><p>A fashion magazine: open the cover, then read spreads, an interview, a photo essay and a back cover.</p><div class="chips"><i style="background:#f3efe8"></i><i style="background:#111"></i><i style="background:#d4231a"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
-        <a class="card" href="09-passport-journey/index.html" style="--d:0.61s;--pbg:linear-gradient(160deg,#e8dcc3,#cdbb97);--pa:linear-gradient(160deg,#1f3a5f,#14243d);--pb:#c9a24a;--pt:#c9a24a;--pf:'Special Elite',monospace;--ps:13px;--pr:6px">
+        <a class="card" href="09-passport-journey/index.html" style="--d:0.47s;--pbg:linear-gradient(160deg,#e8dcc3,#cdbb97);--pa:linear-gradient(160deg,#1f3a5f,#14243d);--pb:#c9a24a;--pt:#c9a24a;--pf:'Special Elite',monospace;--ps:13px;--pr:6px">
           <div class="preview"><div class="dots"><i>✈</i><i>✦</i><i>📮</i><i>✈</i></div><div class="mini"><small>PASSPORT</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 09</span><h2>Passport Journey</h2><p>A travel passport: ID page, a plane that flies along the route as you scroll, boarding passes and postcards.</p><div class="chips"><i style="background:#e8dcc3"></i><i style="background:#1f3a5f"></i><i style="background:#c0392b"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
-        <a class="card" href="10-zen-ink-scroll/index.html" style="--d:0.68s;--pbg:linear-gradient(160deg,#f4efe6,#e2d9c8);--pa:#161616;--pb:#c8321e;--pt:#f4efe6;--pf:'Shippori Mincho',serif;--ps:19px;--pr:4px">
+        <a class="card" href="10-zen-ink-scroll/index.html" style="--d:0.53s;--pbg:linear-gradient(160deg,#f4efe6,#e2d9c8);--pa:#161616;--pb:#c8321e;--pt:#f4efe6;--pf:'Shippori Mincho',serif;--ps:19px;--pr:4px">
           <div class="preview"><div class="dots"><i>🌸</i><i>愛</i><i>✿</i><i>🌸</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 10</span><h2>Ink &amp; Paper</h2><p>A horizontal scroll painting: vertical lettering, an ink-flood entrance, hanging scrolls and brush circles.</p><div class="chips"><i style="background:#f4efe6"></i><i style="background:#161616"></i><i style="background:#c8321e"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
-        <a class="card" href="11-art-deco-deck/index.html" style="--d:0.75s;--pbg:linear-gradient(160deg,#1c1810,#0b0b0b);--pa:linear-gradient(160deg,#1c1810,#0f0d09);--pb:#d4af37;--pt:#f3dc86;--pf:'Limelight',serif;--ps:15px;--pr:12px">
+        <a class="card" href="11-art-deco-deck/index.html" style="--d:0.59s;--pbg:linear-gradient(160deg,#1c1810,#0b0b0b);--pa:linear-gradient(160deg,#1c1810,#0f0d09);--pb:#d4af37;--pt:#f3dc86;--pf:'Limelight',serif;--ps:15px;--pr:12px">
           <div class="preview"><div class="dots"><i>◆</i><i>✦</i><i>◆</i><i>★</i></div><div class="mini"><small>THE WEDDING OF</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 11</span><h2>Art Deco Gala</h2><p>Roaring-twenties glamour: golden elevator doors, a sunburst hero, and event details on a swipeable card deck.</p><div class="chips"><i style="background:#0b0b0b"></i><i style="background:#d4af37"></i><i style="background:#f1e5c3"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
-        <a class="card" href="12-pixel-quest/index.html" style="--d:0.82s;--pbg:linear-gradient(160deg,#5c94fc,#9cc4ff);--pa:#101030;--pb:#fcd000;--pt:#fcd000;--pf:'Press Start 2P',monospace;--ps:9px;--pr:0">
+        <a class="card" href="12-pixel-quest/index.html" style="--d:0.65s;--pbg:linear-gradient(160deg,#5c94fc,#9cc4ff);--pa:#101030;--pb:#fcd000;--pt:#fcd000;--pf:'Press Start 2P',monospace;--ps:9px;--pr:0">
           <div class="preview"><div class="dots"><i>■</i><i>★</i><i>♥</i><i>◆</i></div><div class="mini"><small>PLAYER 1</small><b>Shivani</b><span>&amp;</span><b>Akash</b></div></div>
           <div class="info"><span class="num">DESIGN 12</span><h2>Pixel Quest</h2><p>An 8-bit love story game: title screen, HUD, level-select events and your photos turned into pixel art.</p><div class="chips"><i style="background:#5c94fc"></i><i style="background:#fcd000"></i><i style="background:#ff5ea8"></i></div><span class="open">OPEN <b>→</b></span></div>
         </a>
